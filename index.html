@@ -2,9 +2,78 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EXCEL | ALEXEY — Контроль • Автоматизация • Система</title>
-  <meta name="description" content="Автоматизация процессов, CRM, отчёты, боты, интеграции. EXCEL | ALEXEY." />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <title>Автоматизация бизнеса: Excel/Sheets, CRM, отчёты, интеграции, боты | EXCEL ALEXEY</title>
+  <meta name="description" content="Автоматизация процессов под ключ: Excel/VBA, Google Sheets/Apps Script, CRM, отчёты и дашборды, API-интеграции, Telegram-боты. Кейсы и контакты." />
+
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <link rel="canonical" href="https://excelalexey-maker.github.io/" />
+  <meta name="theme-color" content="#0b0b0b" />
+
+  <!-- Favicon / Icons -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="EXCEL ALEXEY" />
+  <meta property="og:title" content="EXCEL ALEXEY — Автоматизация бизнеса" />
+  <meta property="og:description" content="Excel/Google Sheets, CRM, отчёты, API-интеграции, Telegram-боты. Кейсы и контакты." />
+  <meta property="og:url" content="https://excelalexey-maker.github.io/" />
+  <meta property="og:image" content="https://excelalexey-maker.github.io/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter/X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EXCEL ALEXEY — Автоматизация бизнеса" />
+  <meta name="twitter:description" content="Excel/Google Sheets, CRM, отчёты, API-интеграции, Telegram-боты." />
+  <meta name="twitter:image" content="https://excelalexey-maker.github.io/og-cover.jpg" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "EXCEL ALEXEY",
+      "jobTitle": "Специалист по автоматизации бизнеса",
+      "url": "https://excelalexey-maker.github.io/",
+      "image": "https://excelalexey-maker.github.io/Logo.png",
+      "sameAs": [
+        "https://t.me/ExcelAlexey",
+        "https://t.me/moytestovuykanal",
+        "https://instagram.com/excelalexey"
+      ],
+      "knowsAbout": [
+        "Автоматизация бизнес-процессов",
+        "Excel",
+        "VBA",
+        "Google Sheets",
+        "Apps Script",
+        "CRM",
+        "Отчёты и дашборды",
+        "API-интеграции",
+        "Telegram-боты"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "EXCEL ALEXEY — Автоматизация бизнеса",
+      "url": "https://excelalexey-maker.github.io/",
+      "inLanguage": "ru-RU"
+    }
+  ]
+  </script>
+
   <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -27,8 +96,9 @@
     <!-- HERO -->
     <section class="hero" aria-label="EXCEL | ALEXEY — Контроль, автоматизация, система">
       <div class="hero__media" aria-hidden="true">
+        <!-- Desktop -->
         <video
-          class="hero__video"
+          class="hero__video hero__video--desktop"
           autoplay
           muted
           loop
@@ -36,11 +106,22 @@
           preload="metadata"
           poster="./hero-poster.jpg"
         >
-          <source src="./hero-mobile.mp4" type="video/mp4" media="(max-width: 820px)">
           <source src="./hero-desktop.mp4" type="video/mp4">
         </video>
 
-        <img class="hero__poster" src="./hero-poster.jpg" alt="" loading="eager" />
+        <!-- Mobile -->
+        <video
+          class="hero__video hero__video--mobile"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="./hero-poster.jpg"
+        >
+          <source src="./hero-mobile.mp4" type="video/mp4">
+        </video>
+
         <div class="hero__overlay" aria-hidden="true"></div>
       </div>
 
@@ -49,7 +130,7 @@
         <p class="hero__subtitle">КОНТРОЛЬ • АВТОМАТИЗАЦИЯ • СИСТЕМА</p>
 
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#contact">Написать в Telegram</a>
+          <a class="btn btn--primary" href="https://t.me/finalfour_bot?start=from_site" target="_blank" rel="noopener">Написать в Telegram</a>
           <a class="btn btn--ghost" href="#cases">Смотреть кейсы</a>
         </div>
 
@@ -57,7 +138,6 @@
       </div>
     </section>
 
-    <!-- CONTENT (примерная структура, чтобы страница была валидной) -->
     <section id="cases" class="block">
       <div class="container">
         <h2 class="h2">Кейсы</h2>
@@ -95,7 +175,7 @@
         <h2 class="h2">Контакты</h2>
         <p class="p">Напиши — уточню задачу и предложу решение.</p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="https://t.me/your_telegram" target="_blank" rel="noreferrer">Telegram</a>
+          <a class="btn btn--primary" href="https://t.me/finalfour_bot?start=from_site_contacts" target="_blank" rel="noopener">Telegram</a>
           <a class="btn btn--ghost" href="mailto:you@example.com">Email</a>
         </div>
       </div>
@@ -110,26 +190,15 @@
   </footer>
 
   <script>
-    // скрыть poster, когда видео реально может проигрываться
     (function(){
-      const v = document.querySelector('.hero__video');
-      const p = document.querySelector('.hero__poster');
-      if (!v || !p) return;
-
-      const hidePoster = () => { p.style.opacity = '0'; };
-      v.addEventListener('playing', hidePoster, { once: true });
-      v.addEventListener('canplay', hidePoster, { once: true });
-
       // prefers-reduced-motion -> не гоняем видео
       if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        try { v.pause(); } catch(e){}
-        v.removeAttribute('autoplay');
-        p.style.opacity = '1';
+        document.querySelectorAll('.hero__video').forEach(v => {
+          try { v.pause(); } catch(e){}
+          v.removeAttribute('autoplay');
+        });
       }
     })();
   </script>
 </body>
 </html>
-
-
-
