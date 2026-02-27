@@ -3,21 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>АРТЕЛЬ | EXCEL ALEXEY — Автономные бизнес-системы</title>
-  <meta name="description" content="Разработка автономных систем управления бизнесом: Python, SQL, Google Sheets и Telegram-боты." />
+  <title>EXCEL | ALEXEY — Автоматизация бизнеса: Excel, Sheets, CRM, отчёты, боты</title>
+  <meta name="description" content="Автоматизация бизнес-процессов под ключ: Excel/VBA, Google Sheets/Apps Script, CRM, отчёты и дашборды, API-интеграции, Telegram-боты." />
   <meta name="google-site-verification" content="O84R7Kp4VEFQsmu5itda_h6VPmX3z3XzBydWqkqTWB4" />
+  <meta name="yandex-verification" content="cf1830334002ab55" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
   
   <style>
     :root {
       --bg: #0d0202;
-      --panel: #1a0505;
+      --panel: rgba(26, 5, 5, 0.6);
       --text: #f4f4f4;
-      --muted: #885555;
+      --muted: #aab2c0;
       --accent: #ff3b3b;
-      --accent-glow: rgba(255, 59, 59, 0.3);
+      --accent-glow: rgba(255, 59, 59, 0.2);
       --container: 1100px;
-      --r: 24px;
+      --r: 20px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -26,15 +27,9 @@
       font-family: 'Inter', sans-serif;
       color: var(--text);
       background-color: var(--bg);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* ФОНОВАЯ ПУЛЬСАЦИЯ */
-    body::before {
-      content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: radial-gradient(circle at 50% 50%, #1a0505 0%, #0d0202 100%);
-      z-index: -1;
+      line-height: 1.5;
+      background-image: radial-gradient(circle at 15% 15%, rgba(100, 11, 29, 0.25) 0%, transparent 45%);
+      background-attachment: fixed;
     }
 
     .container { width: min(var(--container), 100% - 40px); margin: 0 auto; }
@@ -43,80 +38,68 @@
     /* HEADER */
     .siteHeader {
       position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(13, 2, 2, 0.85); backdrop-filter: blur(15px);
-      border-bottom: 1px solid #330a0a;
+      background: rgba(13, 2, 2, 0.85); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 59, 59, 0.1);
     }
-    .siteHeader__inner { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: 1px; color: var(--accent); }
-    .brand__logo { width: 35px; border-radius: 8px; filter: drop-shadow(0 0 5px var(--accent)); }
-    
-    .nav { display: flex; gap: 30px; }
-    .nav__link { font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+    .siteHeader__inner { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand__logo { width: 32px; height: 32px; border-radius: 8px; filter: drop-shadow(0 0 5px var(--accent)); }
+    .brand__name { font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent); }
+
+    .nav { display: flex; gap: 24px; }
+    .nav__link { font-size: 14px; color: var(--muted); }
     .nav__link:hover { color: var(--accent); text-shadow: 0 0 10px var(--accent); }
 
-    /* HERO SECTION */
-    main { padding-top: 100px; }
+    .headerCta { padding: 8px 20px; background: var(--accent); border-radius: 50px; font-size: 13px; font-weight: 600; box-shadow: 0 0 15px var(--accent-glow); }
+
+    /* HERO */
+    main { padding-top: 80px; }
+    .heroSection { padding: 20px 0 40px; }
     .heroCard {
-      position: relative; border-radius: var(--r); overflow: hidden;
-      border: 1px solid #330a0a; background: #000;
-      min-height: 500px; display: flex; align-items: center;
-      box-shadow: 0 0 40px rgba(0,0,0,1);
+      position: relative; width: 100%; aspect-ratio: 21 / 9; min-height: 480px;
+      border-radius: var(--r); overflow: hidden; border: 1px solid rgba(255, 59, 59, 0.15);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5); animation: pulseCard 5s infinite;
     }
-    .heroVideo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.4; filter: sepia(100%) saturate(300%) brightness(40%) hue-rotate(-50deg); }
-    .heroContent { position: relative; z-index: 10; padding: 60px; max-width: 700px; }
-    .heroTitle { font-size: clamp(32px, 5vw, 56px); font-weight: 800; line-height: 1; margin-bottom: 20px; text-transform: uppercase; }
-    .heroSubtitle { font-size: 18px; color: var(--muted); margin-bottom: 35px; font-family: 'JetBrains Mono', monospace; }
+    @keyframes pulseCard { 0%, 100% { border-color: rgba(255,59,59,0.15); } 50% { border-color: var(--accent); } }
 
-    /* КНОПКИ ПУЛЬСАЦИИ */
-    .btn {
-      display: inline-flex; padding: 16px 32px; border-radius: 12px; font-weight: 700;
-      text-transform: uppercase; font-size: 13px; letter-spacing: 1px; transition: 0.3s;
-    }
+    .heroVideo { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; filter: saturate(150%) brightness(50%) hue-rotate(-10deg); }
+    .heroOverlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(13,2,2,0.95) 0%, rgba(13,2,2,0.4) 100%); z-index: 2; }
+    .heroContent { position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 0 8%; }
+    .heroTitle { font-size: clamp(28px, 4.5vw, 52px); text-transform: uppercase; line-height: 1.1; font-weight: 800; margin-bottom: 16px; }
+
+    /* BUTTONS */
+    .heroCtaRow { display: flex; gap: 15px; margin-bottom: 10px; flex-wrap: wrap; }
+    .btn { display: inline-flex; padding: 14px 28px; border-radius: 12px; font-weight: 700; font-size: 14px; cursor: pointer; }
     .btn--primary { background: var(--accent); color: #fff; box-shadow: 0 0 20px var(--accent-glow); }
-    .btn--primary:hover { transform: translateY(-3px); box-shadow: 0 0 35px var(--accent); }
-    .btn--ghost { border: 1px solid #4d1010; margin-left: 15px; }
-    .btn--ghost:hover { background: #330a0a; }
+    .btn--ghost { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,59,59,0.2); }
 
-    /* КЕЙСЫ (НЕОНОВЫЕ ЯЧЕЙКИ) */
-    .section { padding: 80px 0; }
-    .h2 { font-size: 32px; margin-bottom: 40px; text-align: center; text-transform: uppercase; letter-spacing: 4px; }
-    .cards3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
+    /* PANELS & CARDS */
+    .section { padding: 60px 0; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .panel { background: var(--panel); padding: 30px; border-radius: var(--r); border: 1px solid rgba(255,59,59,0.1); backdrop-filter: blur(8px); }
+    .h2 { font-size: 28px; margin-bottom: 25px; font-weight: 800; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; }
+
+    .cards3 { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+    .card { background: var(--panel); padding: 25px; border-radius: var(--r); border: 1px solid rgba(255,59,59,0.1); display: flex; flex-direction: column; transition: 0.4s; }
+    .card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 0 25px var(--accent-glow); }
     
-    .card {
-      background: var(--panel); padding: 35px; border-radius: var(--r);
-      border: 1px solid #330a0a; transition: 0.4s; position: relative;
-    }
-    .card:hover { 
-      border-color: var(--accent); 
-      transform: translateY(-10px); 
-      box-shadow: 0 10px 40px rgba(255, 59, 59, 0.1); 
-    }
-    .tag { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 11px; margin-bottom: 15px; display: block; letter-spacing: 2px; }
-    .h3 { font-size: 20px; margin-bottom: 15px; }
-    .p { font-size: 14px; color: var(--muted); margin-bottom: 25px; }
+    .tag { background: var(--accent); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; width: fit-content; margin-bottom: 15px; }
+    .linkBtn { font-weight: 700; color: var(--accent); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
 
-    /* FAQ */
-    .faqItem { background: #110303; border: 1px solid #220505; border-radius: 15px; margin-bottom: 10px; padding: 20px; }
-    summary { font-weight: 700; cursor: pointer; color: var(--accent); outline: none; }
+    .faqItem { background: var(--panel); border-radius: 12px; padding: 18px; border: 1px solid rgba(255,59,59,0.1); margin-bottom: 10px; }
+    summary { font-weight: 700; cursor: pointer; }
 
-    /* CONTACTS */
-    .contactCard { 
-      background: #000; border: 1px solid #330a0a; padding: 40px; border-radius: var(--r); 
-      text-align: center; transition: 0.4s;
-    }
-    .contactCard:hover { border-color: var(--accent); box-shadow: 0 0 30px var(--accent-glow); }
-    .contactK { display: block; font-size: 20px; font-weight: 800; margin-bottom: 10px; }
-    
-    .footer { 
-      margin-top: 100px; padding: 40px 0; border-top: 1px solid #330a0a; 
-      display: flex; justify-content: space-between; font-size: 12px; color: var(--muted);
-    }
+    .contactsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .contactCard { background: var(--panel); padding: 30px; border-radius: var(--r); text-align: center; border: 1px solid rgba(255,59,59,0.1); }
+    .contactCard:hover { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
+
+    .footer { margin-top: 60px; padding: 25px 0; border-top: 1px solid rgba(255,59,59,0.1); display: flex; justify-content: space-between; color: var(--muted); font-size: 13px; }
 
     @media (max-width: 768px) {
       .nav { display: none; }
-      .heroContent { padding: 30px; }
-      .btn--ghost { margin-left: 0; margin-top: 15px; width: 100%; text-align: center; }
-      .btn--primary { width: 100%; text-align: center; }
+      .grid2, .contactsGrid { grid-template-columns: 1fr; }
+      .heroCard { aspect-ratio: 9 / 16; min-height: 550px; }
+      .heroContent { justify-content: flex-end; padding-bottom: 40px; }
     }
   </style>
 </head>
@@ -125,17 +108,16 @@
   <header class="siteHeader">
     <div class="container siteHeader__inner">
       <a class="brand" href="#top">
-        <img class="brand__logo" src="/Logo.png" alt="АРТЕЛЬ" />
-        <span class="brand__name">АРТЕЛЬ</span>
+        <img class="brand__logo" src="/Logo.png" alt="EXCEL | ALEXEY" />
+        <span class="brand__name">EXCEL | ALEXEY</span>
       </a>
-
       <nav class="nav">
-        <a class="nav__link" href="#cases">Системы</a>
+        <a class="nav__link" href="#cases">Кейсы</a>
         <a class="nav__link" href="#process">Процесс</a>
         <a class="nav__link" href="#faq">FAQ</a>
+        <a class="nav__link" href="#contacts">Контакты</a>
       </nav>
-
-      <a class="headerCta" href="https://t.me/ExcelAlexey" target="_blank">Личный контакт</a>
+      <a class="headerCta" href="https://t.me/finalfour_bot?start=from_site_header" target="_blank">В Telegram</a>
     </div>
   </header>
 
@@ -143,59 +125,100 @@
     <section class="heroSection">
       <div class="container">
         <div class="heroCard">
-          <video class="heroVideo" autoplay muted loop playsinline>
-            <source src="/hero-desktop.mp4" type="video/mp4">
-          </video>
-          <div class="heroContent">
-            <h1 class="heroTitle">Архитектура автономных бизнес-систем</h1>
-            <p class="heroSubtitle">> Python_ / SQL_ / Google_ / Telegram_</p>
-            <div class="heroCtaRow">
-              <a class="btn btn--primary" href="https://t.me/finalfour_bot?start=from_site_hero">Запустить диагностику</a>
-              <a class="btn btn--ghost" href="#cases">Каталог решений</a>
-            </div>
+          <div class="heroMedia">
+            <video class="heroVideo" autoplay muted loop playsinline>
+              <source src="/hero-desktop.mp4" type="video/mp4">
+            </video>
+            <div class="heroOverlay"></div>
           </div>
+          <div class="heroContent">
+            <h1 class="heroTitle">Автоматизация бизнеса под ключ</h1>
+            <p class="heroSubtitle">Excel / Google Sheets / CRM / Отчёты / API / Telegram-боты</p>
+            <div class="heroCtaRow">
+              <a class="btn btn--primary" href="https://t.me/finalfour_bot?start=from_site_hero">Написать в Telegram</a>
+              <a class="btn btn--ghost" href="#cases">Смотреть кейсы</a>
+            </div>
+            <p class="heroNote">Без "воды": сначала 3–5 вопросов → план работ.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid2">
+        <div class="panel">
+          <h2 class="h2">Кому подойдёт</h2>
+          <ul class="ul" style="padding-left: 20px; color: var(--muted);">
+            <li>Собственникам — убрать ручную рутину</li>
+            <li>Маркетплейсам — сверки и контроль остатков</li>
+            <li>Продажам — прозрачность и контроль оплат</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h2 class="h2">Что получите</h2>
+          <ul class="ul" style="padding-left: 20px; color: var(--muted);">
+            <li>Понятное ТЗ и пошаговый план</li>
+            <li>Рабочую систему + инструкции</li>
+            <li>Поддержку и доработки</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section id="cases" class="section">
       <div class="container">
-        <h2 class="h2">Решения Артели</h2>
+        <div class="sectionHead"><h2 class="h2">Кейсы-витрина</h2></div>
         <div class="cards3">
           <article class="card">
-            <span class="tag">[ CRM SYSTEM ]</span>
-            <h3 class="h3">Кастомная CRM 360°</h3>
-            <p class="p">Полный контроль пути клиента без ежемесячных платежей за софт.</p>
-            <a href="#" class="highlight">Посмотреть потенциал →</a>
+            <div class="tag">CRM</div>
+            <h3 class="h3">Кастомная CRM + отчётность</h3>
+            <p class="p">Статусы, задачи, оплаты, отчёты, документы/PDF.</p>
+            <a class="linkBtn" href="https://t.me/finalfour_bot?start=case_crm">Подробнее в боте →</a>
           </article>
-          
           <article class="card">
-            <span class="tag">[ ANALYTICS ]</span>
-            <h3 class="h3">Дашборды управления</h3>
-            <p class="p">Автоматический сбор данных с маркетплейсов и API в единый центр.</p>
-            <a href="#" class="highlight">Посмотреть потенциал →</a>
+            <div class="tag">ОТЧЁТЫ</div>
+            <h3 class="h3">Дашборды и аналитика</h3>
+            <p class="p">План/факт, KPI, сегментация, автоматическое обновление.</p>
+            <a class="linkBtn" href="https://t.me/finalfour_bot?start=case_reports">Подробнее в боте →</a>
           </article>
+          <article class="card">
+            <div class="tag">API</div>
+            <h3 class="h3">API-интеграции</h3>
+            <p class="p">Маркетплейсы → таблицы → уведомления.</p>
+            <a class="linkBtn" href="https://t.me/finalfour_bot?start=case_api">Подробнее в боте →</a>
+          </article>
+          </div>
+      </div>
+    </section>
 
-          <article class="card">
-            <span class="tag">[ BOTS ]</span>
-            <h3 class="h3">Операционные боты</h3>
-            <p class="p">Автоматизация уведомлений и управления через Telegram.</p>
-            <a href="#" class="highlight">Посмотреть потенциал →</a>
-          </article>
+    <section id="faq" class="section">
+      <div class="container">
+        <h2 class="h2">FAQ</h2>
+        <div class="faq">
+          <details class="faqItem">
+            <summary>Сколько времени занимает проект?</summary>
+            <div class="faqBody"><p style="padding-top:10px; color: var(--muted);">Прототип 1–3 дня, проект 1–2 недели.</p></div>
+          </details>
         </div>
       </div>
     </section>
 
     <section id="contacts" class="section">
       <div class="container">
-        <div class="contactCard">
-          <h2 class="h2">Связаться с Архитектором</h2>
-          <p class="p">Для тех, кто готов уйти от ручного управления к системе.</p>
-          <a class="btn btn--primary" href="https://t.me/ExcelAlexey">Написать лично @ExcelAlexey</a>
+        <h2 class="h2">Контакты</h2>
+        <div class="contactsGrid">
+          <a class="contactCard" href="https://t.me/finalfour_bot?start=from_site_contacts">
+            <span class="contactK">Telegram Бот</span>
+            <span class="contactV">@finalfour_bot</span>
+          </a>
+          <a class="contactCard" href="https://t.me/ExcelAlexey">
+            <span class="contactK">Написать лично</span>
+            <span class="contactV">@ExcelAlexey</span>
+          </a>
         </div>
         <footer class="footer">
-          <span>© <span id="y"></span> АРТЕЛЬ • EXCEL ALEXEY</span>
-          <span>АВТОНОМНОСТЬ • ПОРЯДОК • РЕЗУЛЬТАТ</span>
+          <span>© <span id="y"></span> EXCEL | ALEXEY</span>
+          <span>Контроль • Автоматизация • Система</span>
         </footer>
       </div>
     </section>
