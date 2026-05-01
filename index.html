@@ -3,21 +3,76 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3XF21N7YJF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3XF21N7YJF');
+</script>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+  (function(m,e,t,r,i,k,a){
+      m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+  })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108996801', 'ym');
+
+  ym(108996801, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108996801" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<!-- Автоопределение языка (срабатывает до рендера) -->
+<script>
+(function(){
+  try {
+    var saved = localStorage.getItem('preferred_lang');
+    if (saved === 'ru') return; // пользователь явно выбрал RU
+    if (saved === 'en') {
+      if (location.pathname === '/' || location.pathname === '/index.html') {
+        location.replace('/en/' + location.search + location.hash);
+      }
+      return;
+    }
+    // Первый визит — определяем по browser language
+    var langs = (navigator.languages || [navigator.language || 'en']).map(function(l){return (l||'').toLowerCase().split('-')[0];});
+    var slavic = ['ru','uk','be','kk','ky','tg','uz','az'];
+    var isSlavic = langs.some(function(l){return slavic.indexOf(l) >= 0;});
+    if (!isSlavic && (location.pathname === '/' || location.pathname === '/index.html')) {
+      location.replace('/en/' + location.search + location.hash);
+    }
+  } catch(e){}
+})();
+</script>
 <meta name="google-site-verification" content="O84R7Kp4VEFQsmu5itda_h6VPmX3z3XzBydWqkqTWB4" />
 
-<title>EXCEL | ALEXEY — Автоматизация бизнеса под ключ. Excel, Google Sheets, CRM, Telegram-боты</title>
-<meta name="description" content="Автоматизация бизнеса под ключ: Excel/VBA, Google Apps Script, Python, MariaDB, Telegram-боты, интеграции с API маркетплейсов (Wildberries, Ozon, Yandex Market). Опыт 7+ лет, 50+ проектов." />
-<meta name="keywords" content="автоматизация бизнеса, Google Apps Script, Excel VBA, Python, MariaDB, Telegram бот, API Wildberries, API Ozon, API Yandex Market, ETL, CRM, дашборды, Streamlit, Node.js" />
-<meta name="author" content="Alexey, EXCEL | ALEXEY" />
-<meta name="robots" content="index, follow" />
+<title>Автоматизация бизнеса под ключ — Excel, Google Sheets, CRM, API маркетплейсов | EXCEL ALEXEY</title>
+<meta name="description" content="Автоматизация бизнеса от 15 000 ₽: Excel/VBA, Google Apps Script, Python, Telegram-боты, API Wildberries/Ozon/Yandex Market. 20+ проектов, 3+ года опыта. Прототип за 1-3 дня, исходники, поддержка после сдачи." />
+<meta name="keywords" content="автоматизация бизнеса, разработка CRM под ключ, Google Apps Script, Excel VBA, Python автоматизация, Telegram бот, API Wildberries, API Ozon, API Yandex Market, ETL, дашборды, аналитика маркетплейсов, юнит-экономика WB" />
+<meta name="author" content="Алексей, EXCEL | ALEXEY" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow" />
+<meta name="yandex" content="index, follow" />
 <link rel="canonical" href="https://excelalexey-maker.github.io/" />
+
+<!-- hreflang для двуязычной выдачи -->
+<link rel="alternate" hreflang="ru" href="https://excelalexey-maker.github.io/" />
+<link rel="alternate" hreflang="en" href="https://excelalexey-maker.github.io/en/" />
+<link rel="alternate" hreflang="x-default" href="https://excelalexey-maker.github.io/" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://excelalexey-maker.github.io/" />
 <meta property="og:title" content="EXCEL | ALEXEY — Автоматизация бизнеса под ключ" />
-<meta property="og:description" content="Excel/VBA, Google Apps Script, Python, MariaDB, Telegram-боты, интеграции с API маркетплейсов. 50+ проектов, 7+ лет опыта." />
+<meta property="og:description" content="Excel/VBA, Google Apps Script, Python, MariaDB, Telegram-боты, интеграции с API маркетплейсов. 20+ проектов, опыт с 2022 года." />
 <meta property="og:image" content="https://excelalexey-maker.github.io/hero-poster.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:locale" content="ru_RU" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:site_name" content="EXCEL | ALEXEY" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="EXCEL | ALEXEY — Автоматизация бизнеса под ключ" />
@@ -25,52 +80,225 @@
 <meta name="twitter:image" content="https://excelalexey-maker.github.io/hero-poster.jpg" />
 
 <meta name="geo.region" content="RU" />
-<meta name="geo.placename" content="Россия / Vietnam (remote)" />
+<meta name="geo.placename" content="Россия, Москва, Санкт-Петербург, Калининград, Vietnam (remote)" />
+<meta name="geo.position" content="55.7558;37.6173" />
+<meta name="ICBM" content="55.7558, 37.6173" />
 <meta name="theme-color" content="#0d0202" />
+<meta name="format-detection" content="telephone=no" />
 
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 
+<link rel="preload" as="image" href="/hero-poster.jpg" fetchpriority="high" />
+<link rel="preload" as="image" href="/Logo.png" />
+<link rel="dns-prefetch" href="//mc.yandex.ru" />
+<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+<link rel="dns-prefetch" href="//api.telegram.org" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
+<!-- ════════════════════════════════════════════════════════════════
+     АНАЛИТИКА И UTM-ТРЕКИНГ
+     ВАЖНО: подставь свои ID ниже:
+       YM_ID  — ID счётчика Яндекс.Метрики (https://metrika.yandex.ru/)
+       GA_ID  — Measurement ID Google Analytics 4 (формат G-XXXXXXXXXX)
+     Если какой-то сервис не нужен — оставь "" (пустую строку), скрипт не загрузится.
+     ════════════════════════════════════════════════════════════════ -->
+<script>
+window.ANALYTICS = {
+  YM_ID: "108996801",          
+  GA_ID: "G-3XF21N7YJF",         
+  TG_BOT_TOKEN: "",   
+  TG_CHAT_ID: ""      
+};
+
+/* === ЗАХВАТ UTM-МЕТОК (хранятся 30 дней) === */
+(function(){
+  try {
+    const params = new URLSearchParams(location.search);
+    const utmKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid','yclid','fbclid'];
+    const captured = {};
+    utmKeys.forEach(k => { const v = params.get(k); if (v) captured[k] = v; });
+    if (Object.keys(captured).length) {
+      captured._first_visit = new Date().toISOString();
+      captured._referrer = document.referrer || 'direct';
+      captured._landing = location.pathname;
+      localStorage.setItem('utm_data', JSON.stringify(captured));
+      localStorage.setItem('utm_data_ts', Date.now().toString());
+    }
+    // протухание через 30 дней
+    const ts = +localStorage.getItem('utm_data_ts') || 0;
+    if (ts && (Date.now() - ts) > 30*24*60*60*1000) {
+      localStorage.removeItem('utm_data');
+      localStorage.removeItem('utm_data_ts');
+    }
+  } catch(e){}
+})();
+
+/* === ЕДИНАЯ ФУНКЦИЯ ОТПРАВКИ СОБЫТИЙ === */
+window.trackEvent = function(category, action, label, value) {
+  try {
+    if (window.ym && window.ANALYTICS.YM_ID) {
+      window.ym(window.ANALYTICS.YM_ID, 'reachGoal', action, { category, label, value });
+    }
+    if (window.gtag) {
+      window.gtag('event', action, { event_category: category, event_label: label, value: value });
+    }
+    // лог в консоль для отладки
+    console.log('[track]', category, action, label || '', value || '');
+  } catch(e){}
+};
+
+/* === ЯНДЕКС.МЕТРИКА === */
+if (window.ANALYTICS.YM_ID) {
+  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+  m[i].l=1*new Date();
+  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  ym(window.ANALYTICS.YM_ID, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" });
+}
+
+/* === GOOGLE ANALYTICS 4 === */
+if (window.ANALYTICS.GA_ID) {
+  const s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.ANALYTICS.GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', window.ANALYTICS.GA_ID, { anonymize_ip: true });
+}
+</script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "EXCEL | ALEXEY",
-  "description": "Автоматизация бизнеса под ключ: Excel/VBA, Google Apps Script, Python, MariaDB, Telegram-боты, интеграции с API маркетплейсов.",
-  "url": "https://excelalexey-maker.github.io/",
-  "image": "https://excelalexey-maker.github.io/hero-poster.jpg",
-  "priceRange": "$$",
-  "areaServed": {"@type": "Country", "name": "Russia"},
-  "provider": {
-    "@type": "Person",
-    "name": "Alexey",
-    "jobTitle": "Business Automation Specialist",
-    "sameAs": [
-      "https://t.me/ExcelAlexey",
-      "https://www.linkedin.com/in/excel-alexey/",
-      "https://career.habr.com/excelalexey",
-      "https://www.instagram.com/excelalexey/",
-      "https://kwork.ru/user/excel_alexey"
-    ]
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Услуги автоматизации",
-    "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Разработка кастомных CRM"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Дашборды и аналитика"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Интеграция с API маркетплейсов"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Telegram-боты"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Excel/VBA макросы"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ETL-системы"}}
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://excelalexey-maker.github.io/#business",
+      "name": "EXCEL | ALEXEY — Автоматизация бизнеса",
+      "alternateName": "Excel Alexey",
+      "description": "Автоматизация бизнеса под ключ: Excel/VBA, Google Apps Script, Python, MariaDB, Telegram-боты, интеграции с API маркетплейсов Wildberries, Ozon, Yandex Market. 20+ проектов с 2022 года.",
+      "url": "https://excelalexey-maker.github.io/",
+      "image": "https://excelalexey-maker.github.io/hero-poster.jpg",
+      "logo": "https://excelalexey-maker.github.io/Logo.png",
+      "priceRange": "₽₽",
+      "currenciesAccepted": "RUB, USD, EUR",
+      "paymentAccepted": "Bank transfer, SBP, Cryptocurrency",
+      "areaServed": [
+        {"@type": "Country", "name": "Russia"},
+        {"@type": "Country", "name": "Belarus"},
+        {"@type": "Country", "name": "Kazakhstan"},
+        {"@type": "AdministrativeArea", "name": "СНГ"}
+      ],
+      "serviceArea": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 55.7558, "longitude": 37.6173}, "geoRadius": 10000000},
+      "knowsLanguage": ["ru", "en"],
+      "provider": {"@id": "https://excelalexey-maker.github.io/#person"},
+      "founder": {"@id": "https://excelalexey-maker.github.io/#person"},
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "18",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Услуги автоматизации",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Разработка кастомных CRM", "description": "CRM-системы под бизнес-процессы заказчика. Стек: Python, Node.js, MariaDB."}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": 80000, "priceCurrency": "RUB"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Дашборды и аналитика", "description": "BI-панели на Streamlit, Google Looker Studio, Excel Power Query."}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": 30000, "priceCurrency": "RUB"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Интеграция с API маркетплейсов", "description": "Wildberries, Ozon, Yandex Market: выгрузка заказов, остатков, цен, рекламы."}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": 40000, "priceCurrency": "RUB"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Telegram-боты", "description": "Боты на aiogram 3 и Node.js: уведомления, заявки, CRM-интеграции."}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": 25000, "priceCurrency": "RUB"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Excel и VBA макросы", "description": "Автоматизация рутины в Excel, кастомные функции, отчёты в один клик."}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": 15000, "priceCurrency": "RUB"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ETL-системы и миграция данных", "description": "Перенос с Google Sheets на серверные БД (MariaDB, PostgreSQL)."}, "priceSpecification": {"@type": "PriceSpecification", "minPrice": 100000, "priceCurrency": "RUB"}}
+        ]
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "author": {"@type": "Person", "name": "Селлер Wildberries (одежда и обувь)"},
+          "reviewBody": "Раньше менеджеры по 2 часа в день копировали данные из ЛК WB. Теперь отчёт по рентабельности артикулов открывается одной кнопкой. Окупилось за месяц."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "author": {"@type": "Person", "name": "Сеть магазинов электроники"},
+          "reviewBody": "Мигрировали с Google Sheets на нормальную БД. Полный цикл выгрузки заказов с 4 кабинетов раньше занимал 20 минут — стало 2-3."
+        },
+        {
+          "@type": "Review",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "author": {"@type": "Person", "name": "ИП, строительная компания, Калининград"},
+          "reviewBody": "ERP под мою стройку, без лишнего. Сметы, акты, договоры — всё генерируется в один клик. Окупаемость пара месяцев."
+        }
+      ],
+      "sameAs": [
+        "https://t.me/ExcelAlexey",
+        "https://www.linkedin.com/in/excel-alexey/",
+        "https://career.habr.com/excelalexey",
+        "https://www.instagram.com/excelalexey/",
+        "https://kwork.ru/user/excel_alexey"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://excelalexey-maker.github.io/#person",
+      "name": "Алексей",
+      "alternateName": "Excel Alexey",
+      "jobTitle": "Специалист по автоматизации бизнеса",
+      "description": "Специалист по автоматизации бизнес-процессов с опытом с ноября 2022 года. Более 20 завершённых проектов: CRM-системы, ETL-пайплайны, интеграции с API маркетплейсов, Telegram-боты.",
+      "url": "https://excelalexey-maker.github.io/",
+      "image": "https://excelalexey-maker.github.io/hero-poster.jpg",
+      "knowsAbout": [
+        "Python", "Google Apps Script", "Excel VBA", "Node.js",
+        "MariaDB", "SQLite", "PostgreSQL", "Streamlit",
+        "aiogram", "Telegram Bot API",
+        "Wildberries API", "Ozon Seller API", "Yandex Market API",
+        "ETL", "REST API", "Cloudflare Tunnel",
+        "Бизнес-автоматизация", "Юнит-экономика маркетплейсов"
+      ],
+      "knowsLanguage": ["ru", "en"],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Business Automation Specialist",
+        "occupationLocation": {"@type": "Country", "name": "Russia"},
+        "skills": "Python, VBA, Google Apps Script, Node.js, MariaDB, Telegram Bot API"
+      },
+      "sameAs": [
+        "https://t.me/ExcelAlexey",
+        "https://www.linkedin.com/in/excel-alexey/",
+        "https://career.habr.com/excelalexey",
+        "https://www.instagram.com/excelalexey/",
+        "https://kwork.ru/user/excel_alexey"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://excelalexey-maker.github.io/#website",
+      "url": "https://excelalexey-maker.github.io/",
+      "name": "EXCEL | ALEXEY",
+      "inLanguage": ["ru", "en"],
+      "publisher": {"@id": "https://excelalexey-maker.github.io/#person"}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Главная", "item": "https://excelalexey-maker.github.io/"},
+        {"@type": "ListItem", "position": 2, "name": "Услуги автоматизации", "item": "https://excelalexey-maker.github.io/#process"},
+        {"@type": "ListItem", "position": 3, "name": "Портфолио", "item": "https://excelalexey-maker.github.io/#cases"},
+        {"@type": "ListItem", "position": 4, "name": "Контакты", "item": "https://excelalexey-maker.github.io/#contact"}
+      ]
+    }
+  ]
 }
 </script>
 
@@ -79,20 +307,20 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "Сколько времени занимает проект?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Прототип за 1–3 дня, готовый проект за 1–2 недели в зависимости от сложности."}},
+    {"@type": "Question", "name": "Сколько времени занимает проект автоматизации?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Прототип за 1-3 дня, готовый проект за 1-2 недели в зависимости от сложности. ETL-системы и кастомные ERP — 3-6 недель."}},
     {"@type": "Question", "name": "Какие технологии используете?",
      "acceptedAnswer": {"@type": "Answer", "text": "Python, Google Apps Script, VBA Excel, Node.js, SQL/MariaDB/SQLite, Telegram Bot API, REST API маркетплейсов (Wildberries, Ozon, Yandex Market)."}},
-    {"@type": "Question", "name": "Работаете официально?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Да, как самозанятый. Заключаю договор, выдаю чеки. Работаю с физлицами, ИП и юрлицами."}},
-    {"@type": "Question", "name": "Кому принадлежит код?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Полностью клиенту. Передаю исходники, документацию и инструкции по эксплуатации."}},
-    {"@type": "Question", "name": "Что если Google заблокирует Apps Script?",
-     "acceptedAnswer": {"@type": "Answer", "text": "В критичных проектах применяю серверную архитектуру (Python + MariaDB) с миграцией с Google Sheets. Это снимает риск блокировок и лимитов Google."}},
-    {"@type": "Question", "name": "Поддержка после сдачи?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Месяц бесплатной поддержки и доработок включён в стоимость. Дальше — по часовой ставке или абонементом."}},
-    {"@type": "Question", "name": "Можно ли подключить 1С?",
-     "acceptedAnswer": {"@type": "Answer", "text": "Да, через REST API, OData, выгрузку в Excel/CSV или прямое подключение к базе. Связка 1С ↔ маркетплейсы / CRM / Telegram реализуется."}}
+    {"@type": "Question", "name": "В каком формате работаете?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Удалённо по всей России и СНГ. Работаю с физлицами, ИП и юрлицами. Оплата на карту, СБП или расчётный счёт. Все детали оформления оговариваем индивидуально."}},
+    {"@type": "Question", "name": "Кому принадлежит код после сдачи проекта?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Полностью клиенту. Передаю исходники, документацию и инструкции по эксплуатации. Никаких подписок и vendor-lock."}},
+    {"@type": "Question", "name": "Есть ли поддержка после сдачи?",
+     "acceptedAnswer": {"@type": "Answer", "text": "2 недели бесплатной поддержки и доработок включены в стоимость. Дальше — по часовой ставке или абонементом."}},
+    {"@type": "Question", "name": "Можно ли подключить 1С к маркетплейсам?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Да, через REST API, OData, выгрузку в Excel/CSV или прямое подключение к базе. Связка 1С с маркетплейсами, CRM и Telegram реализуется."}},
+    {"@type": "Question", "name": "Сколько стоит автоматизация?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Простая автоматизация Google Sheets — от 15 000 ₽. Кастомная CRM — от 80 000 ₽. ETL-система с серверной частью — от 150 000 ₽. Точная цена — после ТЗ."}}
   ]
 }
 </script>
@@ -546,6 +774,400 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
   .metric { padding: 18px 10px; }
   .heroContent { padding: 22px; padding-bottom: 50px; }
 }
+
+/* ═══════════════════════════════════════════════════════════
+   НОВЫЕ ЭЛЕМЕНТЫ — В ТОЙ ЖЕ СТИЛИСТИКЕ (терминал, #ff3b3b)
+   ═══════════════════════════════════════════════════════════ */
+
+.heroParticles { position: absolute; inset: 0; z-index: 4; pointer-events: none; opacity: 0.6; }
+
+/* ── Переключатель языка ── */
+.langSwitch {
+  display: inline-flex; gap: 0; border: 1px solid var(--border); border-radius: 50px;
+  overflow: hidden; margin-right: 12px;
+}
+.langSwitch a {
+  padding: 6px 12px; font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: var(--muted); letter-spacing: 1px; text-transform: uppercase; transition: 0.2s;
+}
+.langSwitch a.active { background: var(--accent); color: #fff; box-shadow: 0 0 12px var(--accent-glow); }
+.langSwitch a:not(.active):hover { color: var(--accent); }
+@media (max-width: 820px) {
+  .langSwitch { margin-right: 8px; }
+  .langSwitch a { padding: 5px 9px; font-size: 10px; }
+}
+
+/* ── Неоновые SVG-иконки (единый стиль) ── */
+.nIcon {
+  width: 28px; height: 28px;
+  stroke: var(--accent); stroke-width: 1.5; fill: none;
+  stroke-linecap: round; stroke-linejoin: round;
+  filter: drop-shadow(0 0 6px var(--accent-glow));
+  transition: 0.3s;
+}
+.nIcon--lg { width: 36px; height: 36px; stroke-width: 1.4; }
+.nIcon--sm { width: 18px; height: 18px; stroke-width: 1.5; }
+.metric:hover .nIcon, .processStep:hover .nIcon, .guaranteeCard:hover .nIcon, .benefitItem:hover .nIcon {
+  filter: drop-shadow(0 0 12px var(--accent));
+  transform: scale(1.1);
+}
+
+.trustRow { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.trustBadge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border: 1px solid var(--border); border-radius: 50px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  color: var(--muted); letter-spacing: 1px; background: rgba(0,0,0,0.4);
+  text-transform: uppercase;
+}
+.trustBadge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: #2ecc71; box-shadow: 0 0 8px #2ecc71; animation: pulseDot 2s infinite; }
+@keyframes pulseDot { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.metric__icon { font-size: 22px; margin-bottom: 6px; opacity: 0.7; transition: 0.3s; }
+.metric:hover .metric__icon { opacity: 1; transform: scale(1.15); }
+.metric .nIcon { display: block; margin: 0 auto 12px; }
+.processStep .nIcon { display: block; margin: 0 auto 10px; }
+.guaranteeCard .nIcon { display: block; margin: 0 auto 12px; }
+.leadMagnet .nIcon { display: block; margin-bottom: 14px; }
+.aboutBlock .nIcon { flex-shrink: 0; }
+
+.benefitsGrid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  margin-top: 30px;
+}
+.benefitItem {
+  background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+  padding: 22px 20px; transition: 0.3s;
+}
+.benefitItem:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 0 25px var(--accent-glow); }
+.benefitItem__icon {
+  width: 44px; height: 44px; border-radius: 12px; background: rgba(255,59,59,0.1);
+  border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+  font-size: 20px; margin-bottom: 14px;
+}
+.benefitItem__title { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #fff; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px; }
+.benefitItem__desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+.processStep__icon { font-size: 24px; margin-bottom: 10px; display: block; }
+
+.testimonial__stars { color: var(--accent); margin-bottom: 12px; letter-spacing: 2px; font-size: 14px; }
+.testimonial__avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), #8a1010);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: 'JetBrains Mono', monospace; font-weight: 800; color: #fff;
+  flex-shrink: 0; box-shadow: 0 0 12px var(--accent-glow);
+}
+.testimonial__authorRow { display: flex; align-items: center; gap: 12px; }
+.testimonial__authorRow > div { display: flex; flex-direction: column; }
+
+.formProgress {
+  display: flex; gap: 4px; margin-bottom: 8px;
+}
+.formProgress__step {
+  flex: 1; height: 3px; background: var(--border); border-radius: 2px; transition: 0.4s;
+}
+.formProgress__step.done, .formProgress__step.active {
+  background: var(--accent); box-shadow: 0 0 10px var(--accent-glow);
+}
+.formProgress__label {
+  display: flex; justify-content: space-between; margin-bottom: 24px;
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  color: var(--muted); letter-spacing: 1px; text-transform: uppercase;
+}
+.formStep { display: none; animation: fadeStep 0.4s ease; }
+.formStep.active { display: block; }
+@keyframes fadeStep { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+.formNav { display: flex; gap: 12px; margin-top: 20px; }
+.formNav .btn { flex: 1; }
+
+.calc {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 30px; max-width: 720px; margin: 0 auto;
+}
+.calc__row { margin-bottom: 22px; }
+.calc__row label { display: block; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); margin-bottom: 10px; letter-spacing: 1px; text-transform: uppercase; }
+.calc__row label::before { content: "> "; }
+.calc__chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.calc__chip {
+  padding: 10px 14px; border: 1px solid var(--border); border-radius: 10px;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted);
+  cursor: pointer; transition: 0.25s; background: var(--bg); user-select: none;
+  text-transform: uppercase; letter-spacing: 1px;
+}
+.calc__chip:hover { border-color: rgba(255,59,59,0.4); color: var(--text); }
+.calc__chip.active { background: var(--accent); color: #fff; border-color: var(--accent); box-shadow: 0 0 15px var(--accent-glow); }
+.calc__result {
+  margin-top: 28px; padding: 24px; background: var(--bg);
+  border: 1px solid var(--accent); border-radius: 14px; text-align: center;
+  box-shadow: inset 0 0 30px rgba(255,59,59,0.05);
+}
+.calc__resultLabel { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+.calc__resultValue {
+  font-family: 'JetBrains Mono', monospace; font-size: clamp(24px, 4vw, 36px); font-weight: 800;
+  color: var(--accent); text-shadow: 0 0 20px var(--accent-glow); margin-bottom: 6px;
+}
+.calc__resultNote { font-size: 12px; color: var(--muted); }
+.calc__cta { margin-top: 18px; }
+
+/* ── Блок "Обо мне" ── */
+.aboutBlock {
+  background: linear-gradient(135deg, var(--card) 0%, var(--card-2) 100%);
+  border: 1px solid var(--border); border-radius: var(--r);
+  padding: 44px; max-width: 820px; margin: 0 auto;
+  position: relative; overflow: hidden;
+}
+.aboutBlock::before {
+  content: ""; position: absolute; top: -50%; right: -30%; width: 60%; height: 200%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+  opacity: 0.18; pointer-events: none;
+}
+.aboutBlock > * { position: relative; z-index: 1; }
+.aboutBlock__head { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.aboutBlock__title {
+  font-family: 'JetBrains Mono', monospace; font-size: clamp(20px, 3vw, 28px);
+  color: var(--accent); text-transform: uppercase; letter-spacing: 1px;
+  text-shadow: 0 0 12px var(--accent-glow);
+}
+.aboutBlock__text p {
+  color: var(--muted); font-size: 15px; line-height: 1.75; margin-bottom: 14px;
+}
+.aboutBlock__text p:last-child { margin-bottom: 0; color: var(--text); }
+.aboutBlock__cta {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px;
+}
+@media (max-width: 820px) {
+  .aboutBlock { padding: 28px 22px; }
+  .aboutBlock__cta .btn { width: 100%; }
+}
+
+.floatCta {
+  position: fixed; bottom: 24px; right: 24px; z-index: 999;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 25px var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: opacity 0.3s, transform 0.3s; opacity: 0; pointer-events: none;
+  animation: floatPulse 2.5s infinite;
+  border: none;
+}
+.floatCta.show { opacity: 1; pointer-events: all; }
+.floatCta:hover { transform: scale(1.1); }
+.floatCta svg { width: 28px; height: 28px; fill: #fff; }
+@keyframes floatPulse {
+  0%,100% { box-shadow: 0 0 0 0 var(--accent-glow), 0 0 25px var(--accent); }
+  50% { box-shadow: 0 0 0 16px transparent, 0 0 25px var(--accent); }
+}
+@media (max-width: 480px) { .floatCta { bottom: 16px; right: 16px; width: 52px; height: 52px; } }
+
+.guaranteesGrid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;
+}
+.guaranteeCard {
+  background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+  padding: 24px 20px; text-align: center; transition: 0.3s;
+}
+.guaranteeCard:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 0 25px var(--accent-glow); }
+.guaranteeCard__icon { font-size: 32px; margin-bottom: 12px; }
+.guaranteeCard__title { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #fff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.guaranteeCard__desc { font-size: 12px; color: var(--muted); line-height: 1.6; }
+
+@media (max-width: 820px) {
+  .benefitsGrid { grid-template-columns: 1fr; }
+  .calc { padding: 22px; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   НИШЕВАЯ АРХИТЕКТУРА (хаб + лендинги по сферам)
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Niches grid (на главной-хабе) ── */
+.nichesIntro {
+  text-align: center; max-width: 720px; margin: 0 auto 40px;
+  color: var(--muted); font-size: 15px; line-height: 1.7;
+}
+.nichesGrid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+  margin-bottom: 30px;
+}
+.nicheCard {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 32px 28px; transition: 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative; overflow: hidden; display: block;
+  text-decoration: none; color: inherit;
+}
+.nicheCard::before {
+  content: ""; position: absolute; top: -50%; right: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 50%);
+  opacity: 0; transition: opacity 0.4s; pointer-events: none;
+}
+.nicheCard:hover { border-color: var(--accent); transform: translateY(-6px); box-shadow: 0 0 40px var(--accent-glow); }
+.nicheCard:hover::before { opacity: 0.3; }
+.nicheCard > * { position: relative; z-index: 1; }
+.nicheCard__icon {
+  width: 56px; height: 56px; border-radius: 14px;
+  background: rgba(255,59,59,0.08); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px; transition: 0.3s;
+}
+.nicheCard:hover .nicheCard__icon { background: rgba(255,59,59,0.15); border-color: var(--accent); }
+.nicheCard__tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px;
+  color: var(--accent); letter-spacing: 1px; text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.nicheCard__title {
+  font-family: 'JetBrains Mono', monospace; font-size: 20px;
+  color: #fff; margin-bottom: 12px; font-weight: 700;
+}
+.nicheCard__desc {
+  font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 18px;
+}
+.nicheCard__list { list-style: none; padding: 0; margin: 0 0 22px; }
+.nicheCard__list li {
+  font-size: 13px; color: var(--text); padding: 6px 0 6px 22px; position: relative;
+  border-bottom: 1px solid var(--border);
+}
+.nicheCard__list li:last-child { border-bottom: none; }
+.nicheCard__list li::before {
+  content: ""; position: absolute; left: 0; top: 14px; width: 12px; height: 1px;
+  background: var(--accent); box-shadow: 0 0 4px var(--accent);
+}
+.nicheCard__cta {
+  display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  color: var(--accent); letter-spacing: 1px; text-transform: uppercase;
+  padding: 8px 0; border-top: 1px solid var(--border); width: 100%;
+  transition: 0.25s;
+}
+.nicheCard:hover .nicheCard__cta { letter-spacing: 1.5px; }
+.nichesFootnote { text-align: center; margin-top: 30px; font-size: 13px; color: var(--muted); }
+.nichesFootnote a { color: var(--accent); }
+@media (max-width: 980px) { .nichesGrid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 680px) {
+  .nichesGrid { grid-template-columns: 1fr; }
+  .nicheCard { padding: 26px 22px; }
+}
+
+/* ── Pains list (для нишевых лендингов) ── */
+.painsList {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;
+}
+.painsList li {
+  background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+  padding: 16px 18px; border-radius: 10px; font-size: 14px; color: var(--text);
+}
+.painsList li::before {
+  content: "⨯"; color: var(--accent); font-weight: 700; margin-right: 10px;
+  font-family: 'JetBrains Mono', monospace;
+}
+@media (max-width: 680px) { .painsList { grid-template-columns: 1fr; } }
+
+/* ── Packages (пакеты для нишевых) ── */
+.pkgGrid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+}
+.pkgCard {
+  background: var(--card); border: 1px solid var(--border); border-radius: var(--r);
+  padding: 30px 26px; transition: 0.3s; display: flex; flex-direction: column;
+}
+.pkgCard:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 0 30px var(--accent-glow); }
+.pkgCard--featured {
+  border-color: var(--accent); position: relative;
+  box-shadow: 0 0 30px var(--accent-glow);
+}
+.pkgCard--featured::before {
+  content: "Популярный"; position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: #fff; font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 1px; padding: 4px 12px; border-radius: 50px;
+  text-transform: uppercase;
+}
+html[lang="en"] .pkgCard--featured::before { content: "Popular"; }
+.pkgCard__name {
+  font-family: 'JetBrains Mono', monospace; font-size: 14px;
+  color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;
+}
+.pkgCard__price {
+  font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 800;
+  color: #fff; margin-bottom: 6px; text-shadow: 0 0 12px var(--accent-glow);
+}
+.pkgCard__term {
+  font-size: 11px; color: var(--muted); text-transform: uppercase;
+  letter-spacing: 1px; margin-bottom: 18px; font-family: 'JetBrains Mono', monospace;
+  padding-bottom: 16px; border-bottom: 1px solid var(--border);
+}
+.pkgCard__list { list-style: none; padding: 0; margin: 0 0 22px; flex: 1; }
+.pkgCard__list li {
+  font-size: 13px; color: var(--text); padding: 7px 0 7px 22px; position: relative; line-height: 1.45;
+}
+.pkgCard__list li::before {
+  content: "+"; position: absolute; left: 0; top: 7px;
+  color: var(--accent); font-family: 'JetBrains Mono', monospace; font-weight: 700;
+}
+.pkgCard .btn { width: 100%; }
+@media (max-width: 980px) { .pkgGrid { grid-template-columns: 1fr; gap: 28px; } }
+
+/* ── Niche lead-magnet ── */
+.nicheMagnet {
+  background: linear-gradient(135deg, var(--card) 0%, var(--card-2) 100%);
+  border: 1px solid var(--accent); border-radius: var(--r);
+  padding: 50px 40px; max-width: 820px; margin: 0 auto;
+  position: relative; overflow: hidden; text-align: center;
+}
+.nicheMagnet::before {
+  content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 50%);
+  opacity: 0.25; animation: rotate 25s linear infinite;
+}
+.nicheMagnet__inner { position: relative; z-index: 1; }
+.nicheMagnet__title {
+  font-family: 'JetBrains Mono', monospace; font-size: clamp(18px, 2.5vw, 24px);
+  color: #fff; margin-bottom: 14px; line-height: 1.3;
+}
+.nicheMagnet__desc {
+  color: var(--muted); font-size: 15px; line-height: 1.7; margin-bottom: 28px;
+  max-width: 600px; margin-left: auto; margin-right: auto;
+}
+@media (max-width: 680px) { .nicheMagnet { padding: 36px 24px; } }
+
+/* ── Performance / Accessibility ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .heroParticles, .stack__track, .heroVideo { display: none !important; }
+}
+@media (max-width: 820px) {
+  .heroParticles { display: none; }
+}
+
+/* ── Exit-intent popup ── */
+.exitPopup {
+  position: fixed; inset: 0; z-index: 9997; display: none;
+  align-items: center; justify-content: center; padding: 20px;
+  background: rgba(0,0,0,0.85); backdrop-filter: blur(10px);
+  animation: fadeInBg 0.3s ease;
+}
+.exitPopup.show { display: flex; }
+@keyframes fadeInBg { from { opacity: 0; } to { opacity: 1; } }
+.exitPopup__inner {
+  background: var(--card); border: 1px solid var(--accent); border-radius: var(--r);
+  max-width: 480px; width: 100%; padding: 36px 32px; position: relative; text-align: center;
+  box-shadow: 0 0 60px var(--accent-glow);
+  animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes popIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.exitPopup__close {
+  position: absolute; top: 12px; right: 12px; width: 32px; height: 32px;
+  border: 1px solid var(--border); border-radius: 50%; background: transparent;
+  color: var(--accent); cursor: pointer; font-size: 18px; line-height: 1;
+}
+.exitPopup__icon { margin: 0 auto 16px; }
+.exitPopup__title { font-family: 'JetBrains Mono', monospace; font-size: 20px; color: #fff; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+.exitPopup__text { color: var(--muted); font-size: 14px; line-height: 1.6; margin-bottom: 22px; }
+.exitPopup__cta { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 </style>
 </head>
 <body>
@@ -556,20 +1178,31 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
 <header class="siteHeader" id="header">
   <div class="container siteHeader__inner">
     <a class="brand" href="#top" aria-label="EXCEL | ALEXEY home">
-      <img class="brand__logo" src="/Logo.png" alt="EXCEL ALEXEY logo" width="30" height="30" />
+      <img class="brand__logo" src="/Logo.png" alt="EXCEL ALEXEY — автоматизация бизнеса, логотип" width="30" height="30" decoding="async" />
       <span class="brand__name">EXCEL | ALEXEY</span>
     </a>
     <nav class="nav" id="nav">
-      <a class="nav__link" href="#process">Процесс</a>
-      <a class="nav__link" href="#cases">Кейсы</a>
-      <a class="nav__link" href="#testimonials">Отзывы</a>
-      <a class="nav__link" href="#faq">FAQ</a>
-      <a class="nav__link" href="#contact">Контакты</a>
+      <a class="nav__link" href="#niches" data-track="nav_niches">Сферы</a>
+      <a class="nav__link" href="#process" data-track="nav_process">Процесс</a>
+      <a class="nav__link" href="#cases" data-track="nav_cases">Кейсы</a>
+      <a class="nav__link" href="#testimonials" data-track="nav_testimonials">Отзывы</a>
+      <a class="nav__link" href="#calc" data-track="nav_calc">Калькулятор</a>
+      <a class="nav__link" href="#faq" data-track="nav_faq">FAQ</a>
+      <a class="nav__link" href="#contact" data-track="nav_contact">Контакты</a>
     </nav>
-    <a class="headerCta" href="#contact">Заявка</a>
+    <a class="headerCta" href="#contact" data-track="header_cta">Заявка</a>
+    <div class="langSwitch" aria-label="Язык / Language">
+      <a href="/" class="active" data-lang-set="ru" data-track="lang_ru">RU</a>
+      <a href="/en/" data-lang-set="en" data-track="lang_en">EN</a>
+    </div>
     <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
   </div>
 </header>
+
+<!-- Floating CTA — Telegram -->
+<a href="https://t.me/finalfour_bot" target="_blank" rel="noopener" class="floatCta" id="floatCta" aria-label="Написать в Telegram-бот" data-track="float_telegram">
+  <svg viewBox="0 0 24 24"><path d="M21.05 3.36 2.71 10.5c-1.25.5-1.24 1.21-.22 1.52l4.7 1.47 10.88-6.86c.51-.31.98-.14.59.2l-8.81 7.96-.34 5.04c.49 0 .7-.22.97-.49l2.34-2.27 4.85 3.58c.89.49 1.53.24 1.76-.83l3.18-14.99c.33-1.31-.5-1.91-1.36-1.46Z"/></svg>
+</a>
 
 <main id="top">
 
@@ -582,15 +1215,22 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
         </video>
         <div class="heroOverlay"></div>
         <div class="heroScanlines"></div>
+        <canvas class="heroParticles" id="heroParticles"></canvas>
         <div class="heroContent">
-          <div class="heroTag">System online</div>
-          <h1 class="heroTitle">Автоматизация <span class="accent">бизнеса</span> под ключ</h1>
-          <p class="heroSubtitle">Excel / Google Sheets / Python / CRM / Telegram-бот</p>
+          <div class="heroTag">Доступен для новых проектов</div>
+          <h1 class="heroTitle">Автоматизация под ваш <span class="accent">бизнес</span>, а не под шаблон</h1>
+          <p class="heroSubtitle">Маркетплейсы · Строительство · Бухгалтерия — у каждой сферы свои задачи и свой стек. Выберите свою ниже.</p>
           <div class="heroCtaRow">
-            <a class="btn btn--primary" href="#contact">Оставить заявку →</a>
-            <a class="btn btn--ghost" href="#cases">Смотреть кейсы</a>
+            <a class="btn btn--primary" href="#niches" data-track="hero_cta_niches">Выбрать сферу →</a>
+            <a class="btn btn--ghost" href="#cases" data-track="hero_cta_cases">Все кейсы</a>
           </div>
-          <p class="heroNote">// 3–5 вопросов → план работ → код</p>
+          <p class="heroNote">Прототип на 2-3 день, фиксированная цена, исходники в полную собственность</p>
+          <div class="trustRow">
+            <span class="trustBadge">20+ проектов</span>
+            <span class="trustBadge">с 2022 года</span>
+            <span class="trustBadge">Поддержка после сдачи</span>
+            <span class="trustBadge">Прототип за 2-3 дня</span>
+          </div>
         </div>
       </div>
     </div>
@@ -600,10 +1240,26 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
   <section class="section" style="padding-top:20px;">
     <div class="container">
       <div class="metrics">
-        <div class="metric reveal"><div class="metric__num" data-target="50" data-suffix="+">0</div><div class="metric__label">Проектов</div></div>
-        <div class="metric reveal"><div class="metric__num" data-target="7" data-suffix="+">0</div><div class="metric__label">Лет опыта</div></div>
-        <div class="metric reveal"><div class="metric__num" data-target="6" data-suffix="">0</div><div class="metric__label">Стеков</div></div>
-        <div class="metric reveal"><div class="metric__num" data-target="24" data-suffix="/7">0</div><div class="metric__label">Поддержка</div></div>
+        <div class="metric reveal">
+          <svg class="nIcon" viewBox="0 0 24 24"><path d="M3 17l4-4 4 2 7-7M14 6h6v6"/></svg>
+          <div class="metric__num" data-target="20" data-suffix="+">0</div>
+          <div class="metric__label">Проектов</div>
+        </div>
+        <div class="metric reveal">
+          <svg class="nIcon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <div class="metric__num" data-target="3" data-suffix="+">0</div>
+          <div class="metric__label">Года опыта</div>
+        </div>
+        <div class="metric reveal">
+          <svg class="nIcon" viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4-8-4z"/><path d="M4 12l8 4 8-4M4 17l8 4 8-4"/></svg>
+          <div class="metric__num" data-target="15" data-suffix="+">0</div>
+          <div class="metric__label">Технологий</div>
+        </div>
+        <div class="metric reveal">
+          <svg class="nIcon" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div class="metric__num" data-target="24" data-suffix="/7">0</div>
+          <div class="metric__label">Поддержка</div>
+        </div>
       </div>
     </div>
   </section>
@@ -622,43 +1278,94 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
     </div>
   </div>
 
-  <!-- ВЫГОДЫ -->
-  <section class="section reveal">
+  <!-- НИШИ -->
+  <section id="niches" class="section reveal">
     <div class="container">
-      <div class="grid2">
-        <div class="panel">
-          <h2 class="h2">Кому подойдёт</h2>
-          <ul class="ul">
-            <li>Селлерам Wildberries / Ozon / Yandex Market</li>
-            <li>Производственным и сервисным компаниям</li>
-            <li>Отделам продаж и маркетинга — нужны прозрачные KPI</li>
-            <li>Собственникам — убрать рутину и ручные расчёты</li>
-            <li>Малому бизнесу вместо дорогой коробочной CRM</li>
+      <h2 class="h2">Выберите свою сферу</h2>
+      <p class="nichesIntro">У каждой ниши — свои задачи, свой стек, свои метрики. Выберите свою — увидите кейсы, цены и подход именно под ваш бизнес.</p>
+
+      <div class="nichesGrid">
+
+        <a href="/marketplaces/" class="nicheCard" data-track="niche_marketplaces">
+          <div class="nicheCard__icon">
+            <svg class="nIcon nIcon--lg" viewBox="0 0 24 24"><path d="M3 7h18l-2 11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2L3 7z"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>
+          </div>
+          <div class="nicheCard__tag">Wildberries · Ozon · Yandex Market</div>
+          <h3 class="nicheCard__title">Селлерам маркетплейсов</h3>
+          <p class="nicheCard__desc">Юнит-экономика по SKU, отчёты с 5 кабинетов в один клик, контроль рекламы и остатков.</p>
+          <ul class="nicheCard__list">
+            <li>Свод данных с WB / Ozon / YM API</li>
+            <li>Расчёт рентабельности по артикулам</li>
+            <li>Автоматизация рекламы и SEO-карточек</li>
           </ul>
-        </div>
-        <div class="panel">
-          <h2 class="h2">Что получите</h2>
-          <ul class="ul">
-            <li>Понятное ТЗ и фиксированный план работ</li>
-            <li>Рабочую систему + документацию + видео-инструкции</li>
-            <li>Исходный код в полную собственность</li>
-            <li>Месяц бесплатной поддержки и доработок</li>
-            <li>Договор / самозанятость, чек после оплаты</li>
+          <span class="nicheCard__cta">Кейсы и цены →</span>
+        </a>
+
+        <a href="/construction/" class="nicheCard" data-track="niche_construction">
+          <div class="nicheCard__icon">
+            <svg class="nIcon nIcon--lg" viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6M9 11h2M13 11h2"/></svg>
+          </div>
+          <div class="nicheCard__tag">Подряд · Девелопмент · Ремонт</div>
+          <h3 class="nicheCard__title">Строительным компаниям</h3>
+          <p class="nicheCard__desc">Сметы, акты, договоры в один клик. Учёт объектов и подрядчиков. Документооборот без 1С.</p>
+          <ul class="nicheCard__list">
+            <li>ERP под объекты и заказчиков</li>
+            <li>Авто-генерация смет и КС-2/КС-3</li>
+            <li>Мобильный доступ с площадки</li>
           </ul>
-        </div>
+          <span class="nicheCard__cta">Кейсы и цены →</span>
+        </a>
+
+        <a href="/accounting/" class="nicheCard" data-track="niche_accounting">
+          <div class="nicheCard__icon">
+            <svg class="nIcon nIcon--lg" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/><circle cx="16" cy="16" r="2"/></svg>
+          </div>
+          <div class="nicheCard__tag">Аутсорсинг · Внутренняя бухгалтерия</div>
+          <h3 class="nicheCard__title">Бухгалтерам и финансистам</h3>
+          <p class="nicheCard__desc">Сверки в 100 раз быстрее, разбор банковских выписок, импорт из 1С, отчёты для собственника.</p>
+          <ul class="nicheCard__list">
+            <li>Автоматический разбор выписок</li>
+            <li>Сверки с контрагентами</li>
+            <li>Дашборды cash flow и P&L</li>
+          </ul>
+          <span class="nicheCard__cta">Кейсы и цены →</span>
+        </a>
+
       </div>
+
+      <p class="nichesFootnote">Не нашли свою сферу? Маркетинг, розница, производство, HR, логистика — пишите, разберёмся. <a href="#contact" data-track="niche_other">Оставить заявку →</a></p>
     </div>
   </section>
 
   <!-- PROCESS -->
   <section id="process" class="section reveal">
     <div class="container">
-      <h2 class="h2">Как я работаю</h2>
+      <h2 class="h2">Как мы будем работать</h2>
       <div class="processGrid">
-        <div class="processStep"><div class="processStep__num">01</div><div class="processStep__title">Brief</div><div class="processStep__desc">3–5 вопросов в боте за 5 минут. Без созвонов «познакомиться».</div></div>
-        <div class="processStep"><div class="processStep__num">02</div><div class="processStep__title">Plan</div><div class="processStep__desc">Письменное ТЗ с этапами, сроками и фиксированной ценой.</div></div>
-        <div class="processStep"><div class="processStep__num">03</div><div class="processStep__title">Build</div><div class="processStep__desc">Прототип за 1–3 дня, готовая система за 1–2 недели. Демо на каждом этапе.</div></div>
-        <div class="processStep"><div class="processStep__num">04</div><div class="processStep__title">Deploy</div><div class="processStep__desc">Сдача под ключ + документация + месяц бесплатной поддержки.</div></div>
+        <div class="processStep">
+          <div class="processStep__num">01</div>
+          <svg class="nIcon" viewBox="0 0 24 24"><path d="M21 12c0 4.4-4 8-9 8-1.5 0-2.9-.3-4.1-.8L3 21l1-4.5C3.4 15.2 3 13.6 3 12c0-4.4 4-8 9-8s9 3.6 9 8z"/></svg>
+          <div class="processStep__title">Brief</div>
+          <div class="processStep__desc">3–5 вопросов в боте за 5 минут. Без созвонов «познакомиться».</div>
+        </div>
+        <div class="processStep">
+          <div class="processStep__num">02</div>
+          <svg class="nIcon" viewBox="0 0 24 24"><path d="M9 4h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M9 4V2h6v2M10 11h4M10 15h4"/></svg>
+          <div class="processStep__title">Plan</div>
+          <div class="processStep__desc">Письменное ТЗ с этапами, сроками и фиксированной ценой.</div>
+        </div>
+        <div class="processStep">
+          <div class="processStep__num">03</div>
+          <svg class="nIcon" viewBox="0 0 24 24"><path d="M8 4h8l4 6-8 10L4 10z"/><path d="M12 4v16M8 4l-4 6M16 4l4 6"/></svg>
+          <div class="processStep__title">Build</div>
+          <div class="processStep__desc">Прототип за 1–3 дня, готовая система за 1–2 недели. Демо на каждом этапе.</div>
+        </div>
+        <div class="processStep">
+          <div class="processStep__num">04</div>
+          <svg class="nIcon" viewBox="0 0 24 24"><path d="M5 15l4-4 3 3 7-7"/><path d="M14 7h6v6"/><path d="M3 21h18"/></svg>
+          <div class="processStep__title">Deploy</div>
+          <div class="processStep__desc">Сдача под ключ + документация + 2 недели бесплатной поддержки.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -666,7 +1373,7 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
   <!-- КЕЙСЫ -->
   <section id="cases" class="section reveal">
     <div class="container">
-      <h2 class="h2">Портфолио</h2>
+      <h2 class="h2">Портфолио · 20+ проектов автоматизации</h2>
       <div class="casesFilter" id="casesFilter">
         <button class="chip active" data-filter="all">Все</button>
         <button class="chip" data-filter="marketplace">Маркетплейсы</button>
@@ -685,19 +1392,37 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
       <h2 class="h2">Отзывы</h2>
       <div class="testimonials">
         <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
           <p class="testimonial__quote">Раньше менеджеры по 2 часа в день копировали данные из ЛК WB. Теперь отчёт по рентабельности артикулов открывается одной кнопкой. Окупилось за месяц.</p>
-          <div class="testimonial__author">— Селлер Wildberries</div>
-          <div class="testimonial__role">Одежда и обувь, оборот 8+ млн ₽/мес</div>
+          <div class="testimonial__authorRow">
+            <div class="testimonial__avatar">СВ</div>
+            <div>
+              <div class="testimonial__author">— Селлер Wildberries</div>
+              <div class="testimonial__role">Одежда и обувь, оборот 8+ млн ₽/мес</div>
+            </div>
+          </div>
         </div>
         <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
           <p class="testimonial__quote">Мигрировали с Google Sheets на нормальную БД. Полный цикл выгрузки заказов с 4 кабинетов раньше занимал 20 минут — стало 2–3. Никаких блокировок API больше нет.</p>
-          <div class="testimonial__author">— Сеть магазинов электроники</div>
-          <div class="testimonial__role">4 бизнеса на Yandex Market</div>
+          <div class="testimonial__authorRow">
+            <div class="testimonial__avatar">СМ</div>
+            <div>
+              <div class="testimonial__author">— Сеть магазинов электроники</div>
+              <div class="testimonial__role">4 бизнеса на Yandex Market</div>
+            </div>
+          </div>
         </div>
         <div class="testimonial">
+          <div class="testimonial__stars">★★★★★</div>
           <p class="testimonial__quote">ERP под мою стройку, как я просил, без лишнего. Сметы, акты, договоры — всё генерируется в один клик. Работает на «малине», окупаемость — пара месяцев.</p>
-          <div class="testimonial__author">— ИП, строительная компания</div>
-          <div class="testimonial__role">Калининград</div>
+          <div class="testimonial__authorRow">
+            <div class="testimonial__avatar">ИП</div>
+            <div>
+              <div class="testimonial__author">— ИП, строительная компания</div>
+              <div class="testimonial__role">Калининград</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -706,16 +1431,120 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
   <!-- FAQ -->
   <section id="faq" class="section reveal">
     <div class="container" style="max-width: 820px;">
-      <h2 class="h2">Вопросы</h2>
+      <h2 class="h2">Частые вопросы об автоматизации</h2>
       <div class="faq">
         <details class="faqItem"><summary>Сколько времени занимает проект?</summary><div class="faqBody">Прототип — 1–3 дня, полноценная система — 1–2 недели в зависимости от сложности. ETL-системы и кастомные ERP — 3–6 недель.</div></details>
         <details class="faqItem"><summary>Какие технологии используете?</summary><div class="faqBody">Python, Google Apps Script, Excel VBA, Node.js (Fastify/Express), SQL/MariaDB/SQLite, aiogram 3, REST API маркетплейсов (Wildberries, Ozon, Yandex Market), Streamlit, Telegram Bot API.</div></details>
-        <details class="faqItem"><summary>Работаете официально?</summary><div class="faqBody">Да, как самозанятый. Заключаю договор, выдаю чеки. Работаю с физлицами, ИП и юрлицами в России и СНГ.</div></details>
+        <details class="faqItem"><summary>В каком формате работаете?</summary><div class="faqBody">Удалённо по всей России и СНГ. Работаю с физлицами, ИП и юрлицами. Оплата на карту, СБП или расчётный счёт. Все детали оформления оговариваем индивидуально.</div></details>
         <details class="faqItem"><summary>Кому принадлежит код?</summary><div class="faqBody">Полностью клиенту. После оплаты передаю исходники, доступы, документацию и видео-инструкции. Никаких подписок и vendor-lock.</div></details>
-        <details class="faqItem"><summary>Что если Google заблокирует Apps Script?</summary><div class="faqBody">В критичных проектах изначально применяю серверную архитектуру (Python + MariaDB на VPS/Raspberry Pi). Это снимает риск блокировок и лимитов Google.</div></details>
-        <details class="faqItem"><summary>Поддержка после сдачи?</summary><div class="faqBody">Месяц бесплатной поддержки и мелких доработок включён в стоимость. Дальше — по часовой ставке или абонементом.</div></details>
+        <details class="faqItem"><summary>Поддержка после сдачи?</summary><div class="faqBody">2 недели бесплатной поддержки и мелких доработок включены в стоимость. Дальше — по часовой ставке или абонементом.</div></details>
         <details class="faqItem"><summary>Можно ли подключить 1С?</summary><div class="faqBody">Да: через REST API, OData, выгрузку в Excel/CSV или прямое подключение к базе. Связки 1С ↔ маркетплейсы / CRM / Telegram реализуемы.</div></details>
         <details class="faqItem"><summary>Сколько стоит?</summary><div class="faqBody">Зависит от объёма: простая автоматизация Google Sheets — от 15 000 ₽, кастомная CRM — от 80 000 ₽, ETL-система с серверной частью — от 150 000 ₽. Точная цена — после ТЗ.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ГАРАНТИИ -->
+  <section id="guarantees" class="section reveal">
+    <div class="container">
+      <h2 class="h2">Гарантии</h2>
+      <div class="guaranteesGrid">
+        <div class="guaranteeCard">
+          <svg class="nIcon nIcon--lg" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h6"/></svg>
+          <div class="guaranteeCard__title">Прозрачность</div>
+          <div class="guaranteeCard__desc">Письменное ТЗ перед стартом. Фиксированная цена. Демо на каждом этапе.</div>
+        </div>
+        <div class="guaranteeCard">
+          <svg class="nIcon nIcon--lg" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/><circle cx="12" cy="16" r="1.2"/></svg>
+          <div class="guaranteeCard__title">NDA</div>
+          <div class="guaranteeCard__desc">Подписываю соглашение о неразглашении. Доступы — только под задачу.</div>
+        </div>
+        <div class="guaranteeCard">
+          <svg class="nIcon nIcon--lg" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="13" y1="4" x2="11" y2="20"/></svg>
+          <div class="guaranteeCard__title">Исходники</div>
+          <div class="guaranteeCard__desc">Код полностью ваш. Никаких vendor-lock и подписок на мою сторону.</div>
+        </div>
+        <div class="guaranteeCard">
+          <svg class="nIcon nIcon--lg" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 1 0 3 7l-7.5 7.5a2.1 2.1 0 0 1-3-3L14.7 10"/><path d="M14.7 6.3l3 3"/></svg>
+          <div class="guaranteeCard__title">Поддержка</div>
+          <div class="guaranteeCard__desc">2 недели бесплатных доработок. Дальше — по часовой ставке.</div>
+        </div>
+        <div class="guaranteeCard">
+          <svg class="nIcon nIcon--lg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M2 12h3M19 12h3M12 2v3M12 19v3"/></svg>
+          <div class="guaranteeCard__title">Опыт</div>
+          <div class="guaranteeCard__desc">20+ завершённых проектов с ноября 2022. Excel, Python, маркетплейсы, CRM.</div>
+        </div>
+        <div class="guaranteeCard">
+          <svg class="nIcon nIcon--lg" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg>
+          <div class="guaranteeCard__title">Сроки</div>
+          <div class="guaranteeCard__desc">Прототип за 1–3 дня. Срываю срок — компенсирую часами доработок.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАЛЬКУЛЯТОР СТОИМОСТИ -->
+  <section id="calc" class="section reveal">
+    <div class="container">
+      <h2 class="h2">Калькулятор стоимости автоматизации</h2>
+      <div class="calc">
+        <div class="calc__row">
+          <label>Тип задачи</label>
+          <div class="calc__chips" data-calc="type">
+            <div class="calc__chip active" data-val="0">Excel / VBA</div>
+            <div class="calc__chip" data-val="1">Google Sheets автоматизация</div>
+            <div class="calc__chip" data-val="2">Telegram-бот</div>
+            <div class="calc__chip" data-val="3">Кастомная CRM</div>
+            <div class="calc__chip" data-val="4">ETL / интеграции API</div>
+            <div class="calc__chip" data-val="5">Дашборд / BI</div>
+          </div>
+        </div>
+        <div class="calc__row">
+          <label>Сложность</label>
+          <div class="calc__chips" data-calc="level">
+            <div class="calc__chip active" data-val="1">Базовая</div>
+            <div class="calc__chip" data-val="1.6">Средняя</div>
+            <div class="calc__chip" data-val="2.4">Сложная</div>
+          </div>
+        </div>
+        <div class="calc__row">
+          <label>Срочность</label>
+          <div class="calc__chips" data-calc="urgency">
+            <div class="calc__chip active" data-val="1">Стандарт (2 нед)</div>
+            <div class="calc__chip" data-val="1.3">Быстро (1 нед)</div>
+            <div class="calc__chip" data-val="1.6">Срочно (3–5 дн)</div>
+          </div>
+        </div>
+        <div class="calc__result">
+          <div class="calc__resultLabel">Ориентировочная стоимость</div>
+          <div class="calc__resultValue" id="calcResult">от 15 000 ₽</div>
+          <div class="calc__resultNote">Точная цена — после ТЗ. Калькулятор показывает ориентир.</div>
+          <div class="calc__cta">
+            <a href="#contact" class="btn btn--primary" data-track="calc_to_form">Получить точный расчёт →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОБО МНЕ -->
+  <section id="about" class="section reveal">
+    <div class="container">
+      <div class="aboutBlock">
+        <div class="aboutBlock__head">
+          <svg class="nIcon nIcon--lg" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+          <h2 class="aboutBlock__title">Привет, я Алексей</h2>
+        </div>
+        <div class="aboutBlock__text">
+          <p>Делаю автоматизацию для бизнеса с ноября 2022 года. За это время — 20+ проектов: от макросов в Excel до CRM с интеграцией маркетплейсов.</p>
+          <p>Работаю так: расскажите задачу, я уточню детали, пришлю письменное ТЗ с фиксированной ценой и сроком. Без долгих созвонов и многостраничных КП.</p>
+          <p>Прототип на 2–3 день — посмотрите и скажете, что поправить. Финальную версию передаю с документацией и короткими видео для ваших сотрудников.</p>
+          <p>Напишите в Telegram или оставьте заявку ниже. Отвечаю в течение дня.</p>
+        </div>
+        <div class="aboutBlock__cta">
+          <a class="btn btn--primary" href="#contact" data-track="about_cta_form">Оставить заявку</a>
+          <a class="btn btn--ghost" href="https://t.me/ExcelAlexey" target="_blank" rel="noopener" data-track="about_cta_telegram">Написать в Telegram</a>
+        </div>
       </div>
     </div>
   </section>
@@ -725,16 +1554,24 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
     <div class="container">
       <h2 class="h2">Оставить заявку</h2>
       <form class="form" id="leadForm" novalidate>
-        <div class="form__row">
-          <label for="f-name">Ваше имя</label>
-          <input id="f-name" name="name" type="text" required maxlength="80" autocomplete="name" />
+
+        <!-- honeypot: реальные люди не видят, боты заполняют -->
+        <input type="text" name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;" aria-hidden="true" />
+        <input type="hidden" name="form_started_at" id="formStartedAt" value="" />
+
+        <div class="formProgress">
+          <div class="formProgress__step active" data-step="1"></div>
+          <div class="formProgress__step" data-step="2"></div>
+          <div class="formProgress__step" data-step="3"></div>
         </div>
-        <div class="form__row form__row--grid">
-          <div>
-            <label for="f-contact">Контакт (Telegram / email / телефон)</label>
-            <input id="f-contact" name="contact" type="text" required maxlength="120" placeholder="@username или email" />
-          </div>
-          <div>
+        <div class="formProgress__label">
+          <span id="formStepLabel">Шаг 1 из 3 · О задаче</span>
+          <span id="formStepCount">33%</span>
+        </div>
+
+        <!-- ШАГ 1: ЗАДАЧА -->
+        <div class="formStep active" data-step="1">
+          <div class="form__row">
             <label for="f-type">Тип проекта</label>
             <select id="f-type" name="type" required>
               <option value="">— выберите —</option>
@@ -747,27 +1584,54 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
               <option>Другое</option>
             </select>
           </div>
-        </div>
-        <div class="form__row">
-          <label>Бюджет</label>
-          <div class="budgetGroup">
-            <label><input type="radio" name="budget" value="до 30к" /><span>до 30к</span></label>
-            <label><input type="radio" name="budget" value="30–100к" /><span>30 – 100к</span></label>
-            <label><input type="radio" name="budget" value="100к+" /><span>100к+</span></label>
-            <label><input type="radio" name="budget" value="обсуждаемо" checked /><span>обсуждаемо</span></label>
+          <div class="form__row">
+            <label>Бюджет</label>
+            <div class="budgetGroup">
+              <label><input type="radio" name="budget" value="до 30к" /><span>до 30к</span></label>
+              <label><input type="radio" name="budget" value="30–100к" /><span>30 – 100к</span></label>
+              <label><input type="radio" name="budget" value="100к+" /><span>100к+</span></label>
+              <label><input type="radio" name="budget" value="обсуждаемо" checked /><span>обсуждаемо</span></label>
+            </div>
+          </div>
+          <div class="formNav">
+            <button type="button" class="btn btn--primary" data-next="2" style="width:100%;">Далее →</button>
           </div>
         </div>
-        <div class="form__row">
-          <label for="f-msg">Кратко о задаче</label>
-          <textarea id="f-msg" name="message" maxlength="2000" placeholder="Что нужно автоматизировать, какой стек уже используется, желаемый срок..."></textarea>
+
+        <!-- ШАГ 2: ОПИСАНИЕ -->
+        <div class="formStep" data-step="2">
+          <div class="form__row">
+            <label for="f-msg">Кратко о задаче</label>
+            <textarea id="f-msg" name="message" maxlength="2000" placeholder="Что нужно автоматизировать, какой стек уже используется, желаемый срок..."></textarea>
+          </div>
+          <div class="formNav">
+            <button type="button" class="btn btn--ghost" data-prev="1">← Назад</button>
+            <button type="button" class="btn btn--primary" data-next="3">Далее →</button>
+          </div>
         </div>
-        <div class="form__row">
-          <label class="checkboxRow">
-            <input type="checkbox" name="agree" id="f-agree" required />
-            <span>Согласен с обработкой персональных данных по <a href="#" id="privacyLink">Политике конфиденциальности</a> в соответствии с ФЗ-152.</span>
-          </label>
+
+        <!-- ШАГ 3: КОНТАКТ -->
+        <div class="formStep" data-step="3">
+          <div class="form__row">
+            <label for="f-name">Ваше имя</label>
+            <input id="f-name" name="name" type="text" required maxlength="80" autocomplete="name" />
+          </div>
+          <div class="form__row">
+            <label for="f-contact">Контакт (Telegram / email / телефон)</label>
+            <input id="f-contact" name="contact" type="text" required maxlength="120" placeholder="@username, email или +7..." />
+          </div>
+          <div class="form__row">
+            <label class="checkboxRow">
+              <input type="checkbox" name="agree" id="f-agree" required />
+              <span>Согласен с обработкой персональных данных по <a href="#" id="privacyLink">Политике конфиденциальности</a> в соответствии с ФЗ-152.</span>
+            </label>
+          </div>
+          <div class="formNav">
+            <button type="button" class="btn btn--ghost" data-prev="2">← Назад</button>
+            <button type="submit" class="btn btn--primary" id="submitBtn">Отправить заявку →</button>
+          </div>
         </div>
-        <button type="submit" class="btn btn--primary" id="submitBtn" style="width:100%;">Отправить заявку →</button>
+
         <div class="formStatus" id="formStatus"></div>
       </form>
     </div>
@@ -811,14 +1675,14 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 4h3v6.5L11 4h3.6l-5 6 5.4 10H11.4L7.4 13l-1.4 1.6V20H3Zm14 0h3v16h-3Z"/></svg>
         </a>
       </div>
-      <p style="text-align:center; margin-top:24px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted); letter-spacing:1px;">// Все каналы связи — пульсируют, кликабельны</p>
+      </div>
     </div>
   </section>
 
   <footer class="footer container">
     <span>© <span id="y"></span> EXCEL | ALEXEY · Автоматизация бизнеса</span>
     <span><a href="#" id="privacyLink2">Политика конфиденциальности</a></span>
-    <span>КОНТРОЛЬ · АВТОМАТИЗАЦИЯ · СИСТЕМА</span>
+    <span>Excel · Python · Google Apps Script · Telegram</span>
   </footer>
 </main>
 
@@ -834,11 +1698,11 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
 <div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-labelledby="privTitle">
   <div class="modal__inner">
     <button class="modal__close" id="privClose" aria-label="Закрыть">×</button>
-    <div class="modal__tag">// 152-ФЗ</div>
+    <div class="modal__tag">152-ФЗ</div>
     <h2 class="modal__title" id="privTitle">Политика конфиденциальности</h2>
     <p>Настоящая Политика регулирует обработку персональных данных, которые получены от пользователей сайта <strong>excelalexey-maker.github.io</strong> (далее — «Сайт») и через привязанные каналы связи (Telegram, email).</p>
     <h4>1. Оператор обработки</h4>
-    <p>Оператором является самозанятый специалист Алексей (EXCEL | ALEXEY), осуществляющий деятельность по разработке программного обеспечения. Связь: <a href="https://t.me/ExcelAlexey" style="color:var(--accent);">@ExcelAlexey</a>.</p>
+    <p>Оператором является Алексей (EXCEL | ALEXEY), специалист по разработке программного обеспечения. Связь: <a href="https://t.me/ExcelAlexey" style="color:var(--accent);">@ExcelAlexey</a>.</p>
     <h4>2. Какие данные собираются</h4>
     <ul>
       <li>Имя (для обращения к пользователю)</li>
@@ -866,7 +1730,7 @@ summary::after { content: "+"; color: var(--accent); font-family: 'JetBrains Mon
     <p>Сайт использует только технические cookies для работы интерфейса. Аналитические сервисы (Яндекс.Метрика / Google Analytics) могут устанавливать cookies в обезличенном виде.</p>
     <h4>9. Изменения</h4>
     <p>Политика может обновляться. Актуальная версия всегда опубликована на этой странице.</p>
-    <p style="margin-top:24px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted);">[ Дата редакции: 2026 г. ]</p>
+    <p style="margin-top:24px; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--muted);">Редакция от 2026 года</p>
   </div>
 </div>
 
@@ -1165,10 +2029,46 @@ const nav = document.getElementById('nav');
 burger.addEventListener('click', () => { burger.classList.toggle('open'); nav.classList.toggle('mobile'); });
 nav.querySelectorAll('.nav__link').forEach(a => a.addEventListener('click', () => { burger.classList.remove('open'); nav.classList.remove('mobile'); }));
 
-/* === ФОРМА === */
+/* === МНОГОШАГОВАЯ ФОРМА === */
 const form = document.getElementById('leadForm');
 const status = document.getElementById('formStatus');
 const submitBtn = document.getElementById('submitBtn');
+const stepLabel = document.getElementById('formStepLabel');
+const stepCount = document.getElementById('formStepCount');
+const STEP_LABELS = { 1: 'Шаг 1 из 3 · О задаче', 2: 'Шаг 2 из 3 · Описание', 3: 'Шаг 3 из 3 · Контакт' };
+let currentStep = 1;
+
+// Время начала заполнения формы (для антиспам time-trap)
+form.addEventListener('focusin', () => {
+  const startedAt = document.getElementById('formStartedAt');
+  if (!startedAt.value) startedAt.value = Date.now();
+}, { once: false });
+
+function gotoStep(n) {
+  // валидация при переходе вперёд
+  if (n > currentStep) {
+    if (currentStep === 1) {
+      const t = form.querySelector('#f-type').value;
+      if (!t) { showStatus('err', 'Выберите тип проекта'); return; }
+    }
+  }
+  status.classList.remove('show', 'ok', 'err');
+  document.querySelectorAll('.formStep').forEach(s => s.classList.remove('active'));
+  document.querySelector(`.formStep[data-step="${n}"]`).classList.add('active');
+  document.querySelectorAll('.formProgress__step').forEach(s => {
+    const sn = +s.dataset.step;
+    s.classList.remove('active','done');
+    if (sn < n) s.classList.add('done');
+    else if (sn === n) s.classList.add('active');
+  });
+  stepLabel.textContent = STEP_LABELS[n];
+  stepCount.textContent = Math.round(n/3*100) + '%';
+  currentStep = n;
+  trackEvent('form', 'form_step_' + n);
+}
+
+form.querySelectorAll('[data-next]').forEach(b => b.addEventListener('click', () => gotoStep(+b.dataset.next)));
+form.querySelectorAll('[data-prev]').forEach(b => b.addEventListener('click', () => gotoStep(+b.dataset.prev)));
 
 form.addEventListener('submit', async e => {
   e.preventDefault();
@@ -1178,19 +2078,51 @@ form.addEventListener('submit', async e => {
   const data = Object.fromEntries(fd.entries());
 
   if (!data.name || !data.contact || !data.type) {
-    showStatus('err', '> ОШИБКА: заполните обязательные поля');
+    showStatus('err', 'Заполните обязательные поля');
     return;
   }
   if (!data.agree) {
-    showStatus('err', '> ОШИБКА: примите политику конфиденциальности');
+    showStatus('err', 'Примите политику конфиденциальности');
+    return;
+  }
+
+  // Антиспам: honeypot (бот заполнил скрытое поле)
+  if (data.website) {
+    console.log('[antispam] honeypot triggered');
+    showStatus('ok', 'Заявка отправлена. Отвечу в течение дня.');
+    form.reset();
+    return;
+  }
+  // Антиспам: time-trap (отправка быстрее 3 сек = бот)
+  const startedAt = +data.form_started_at || 0;
+  if (startedAt && Date.now() - startedAt < 3000) {
+    console.log('[antispam] time-trap triggered');
+    showStatus('ok', 'Заявка отправлена. Отвечу в течение дня.');
+    form.reset();
     return;
   }
 
   submitBtn.disabled = true;
   submitBtn.textContent = 'Отправка...';
 
+  // подтянуть UTM из localStorage
+  let utm = {};
+  try { utm = JSON.parse(localStorage.getItem('utm_data') || '{}'); } catch(e){}
+
+  // получить clientID Метрики (для атрибуции)
+  let metrikaClientID = '';
   try {
-    const text =
+    if (window.ym && window.ANALYTICS.YM_ID) {
+      window.ym(window.ANALYTICS.YM_ID, 'getClientID', function(id) { metrikaClientID = id; });
+    }
+  } catch(e){}
+
+  const utmText = Object.keys(utm).length
+    ? '\n📊 UTM:\n' + Object.entries(utm).map(([k,v]) => `   ${k}: ${v}`).join('\n')
+    : '\n📊 UTM: прямой заход';
+  const metrikaText = metrikaClientID ? `\n🆔 Metrika ClientID: ${metrikaClientID}` : '';
+
+  const text =
 `🔔 НОВАЯ ЗАЯВКА с сайта
 ━━━━━━━━━━━━━━━━━━━━
 👤 Имя: ${data.name}
@@ -1198,26 +2130,45 @@ form.addEventListener('submit', async e => {
 🎯 Тип: ${data.type}
 💰 Бюджет: ${data.budget || '—'}
 ✉️ Сообщение: ${data.message || '—'}
-━━━━━━━━━━━━━━━━━━━━
-🌐 ${location.hostname}
-🕐 ${new Date().toLocaleString('ru-RU')}`;
+━━━━━━━━━━━━━━━━━━━━${utmText}${metrikaText}
+🌐 ${location.hostname}${location.pathname}
+🕐 ${new Date().toLocaleString('ru-RU')}
+🖥 ${navigator.userAgent.slice(0,80)}`;
 
-    const tgUrl = window.LEAD_TG_URL;
-    if (tgUrl) {
-      const r = await fetch(tgUrl, {
+  try {
+    let sent = false;
+    const A = window.ANALYTICS || {};
+
+    // Способ 1: прямая отправка в Telegram через Bot API
+    if (A.TG_BOT_TOKEN && A.TG_CHAT_ID) {
+      const r = await fetch(`https://api.telegram.org/bot${A.TG_BOT_TOKEN}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ text })
+        body: JSON.stringify({ chat_id: A.TG_CHAT_ID, text, parse_mode: 'HTML', disable_web_page_preview: true })
       });
-      if (!r.ok) throw new Error('network');
-    } else {
-      await new Promise(r => setTimeout(r, 800));
+      if (r.ok) sent = true;
     }
 
-    showStatus('ok', '> ЗАЯВКА ОТПРАВЛЕНА. ОТВЕЧУ В ТЕЧЕНИЕ ДНЯ.');
+    // Способ 2: кастомный backend (для совместимости со старой схемой)
+    if (!sent && window.LEAD_TG_URL) {
+      const r = await fetch(window.LEAD_TG_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, data, utm })
+      });
+      if (r.ok) sent = true;
+    }
+
+    if (!sent) throw new Error('Не настроен ни один канал отправки. Заполни ANALYTICS.TG_BOT_TOKEN и TG_CHAT_ID в начале страницы.');
+
+    trackEvent('form', 'form_submit_success', data.type, data.budget);
+    showStatus('ok', 'Заявка отправлена. Отвечу в течение дня.');
     form.reset();
+    setTimeout(() => gotoStep(1), 100);
   } catch (err) {
-    showStatus('err', '> ОШИБКА ОТПРАВКИ. НАПИШИТЕ В TELEGRAM @ExcelAlexey');
+    console.error('[form]', err);
+    trackEvent('form', 'form_submit_error', err.message);
+    showStatus('err', 'Не удалось отправить. Напишите в Telegram @ExcelAlexey');
   } finally {
     submitBtn.disabled = false;
     submitBtn.textContent = 'Отправить заявку →';
@@ -1229,6 +2180,162 @@ function showStatus(type, msg) {
   status.textContent = msg;
 }
 
+/* === КАЛЬКУЛЯТОР === */
+const CALC_BASE = [15000, 25000, 40000, 80000, 100000, 60000]; // соответствует chip data-val="0..5"
+function recalc() {
+  const root = document.querySelector('.calc'); if (!root) return;
+  const typeIdx = +root.querySelector('[data-calc="type"] .active').dataset.val;
+  const level = +root.querySelector('[data-calc="level"] .active').dataset.val;
+  const urgency = +root.querySelector('[data-calc="urgency"] .active').dataset.val;
+  const base = CALC_BASE[typeIdx];
+  const min = Math.round(base * level * urgency / 1000) * 1000;
+  const max = Math.round(min * 1.6 / 1000) * 1000;
+  document.getElementById('calcResult').textContent = `${min.toLocaleString('ru-RU')} – ${max.toLocaleString('ru-RU')} ₽`;
+}
+document.querySelectorAll('.calc__chips').forEach(group => {
+  group.addEventListener('click', e => {
+    const chip = e.target.closest('.calc__chip'); if (!chip) return;
+    group.querySelectorAll('.calc__chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    recalc();
+    trackEvent('calc', 'calc_change', group.dataset.calc + '=' + chip.textContent);
+  });
+});
+if (document.querySelector('.calc')) recalc();
+
+/* === HERO PARTICLES (canvas, дешёвый) === */
+(function(){
+  const c = document.getElementById('heroParticles'); if (!c) return;
+  const ctx = c.getContext('2d');
+  let W, H, parts = [];
+  function resize() {
+    const r = c.getBoundingClientRect();
+    W = c.width = r.width; H = c.height = r.height;
+    parts = Array.from({length: Math.min(40, Math.floor(W*H/15000))}, () => ({
+      x: Math.random()*W, y: Math.random()*H,
+      vx: (Math.random()-0.5)*0.3, vy: (Math.random()-0.5)*0.3,
+      r: Math.random()*1.5+0.5
+    }));
+  }
+  resize();
+  window.addEventListener('resize', resize);
+  function tick() {
+    ctx.clearRect(0,0,W,H);
+    parts.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba(255,59,59,0.6)';
+      ctx.fill();
+    });
+    // линии между близкими точками
+    for (let i = 0; i < parts.length; i++) {
+      for (let j = i+1; j < parts.length; j++) {
+        const dx = parts[i].x - parts[j].x, dy = parts[i].y - parts[j].y;
+        const d = Math.sqrt(dx*dx + dy*dy);
+        if (d < 100) {
+          ctx.beginPath();
+          ctx.moveTo(parts[i].x, parts[i].y);
+          ctx.lineTo(parts[j].x, parts[j].y);
+          ctx.strokeStyle = `rgba(255,59,59,${0.15 * (1 - d/100)})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+/* === ТРЕКИНГ КЛИКОВ ПО ВСЕМ ВАЖНЫМ ЭЛЕМЕНТАМ === */
+document.addEventListener('click', e => {
+  const langEl = e.target.closest('[data-lang-set]');
+  if (langEl) {
+    try { localStorage.setItem('preferred_lang', langEl.dataset.langSet); } catch(err){}
+  }
+
+  const el = e.target.closest('[data-track], a.social, a.contactCard, a.headerCta, .chip[data-filter], summary');
+  if (!el) return;
+  if (el.dataset.track) {
+    trackEvent('click', el.dataset.track, el.textContent.trim().slice(0,50));
+  } else if (el.classList.contains('social')) {
+    trackEvent('social', 'social_click', el.getAttribute('aria-label'));
+  } else if (el.classList.contains('contactCard')) {
+    trackEvent('contact', 'contact_click', el.querySelector('.contactK')?.textContent);
+  } else if (el.classList.contains('headerCta')) {
+    trackEvent('cta', 'header_cta_click');
+  } else if (el.dataset.filter) {
+    trackEvent('cases', 'filter_click', el.dataset.filter);
+  } else if (el.tagName === 'SUMMARY') {
+    trackEvent('faq', 'faq_open', el.textContent.trim().slice(0,60));
+  }
+});
+
+/* === ТРЕКИНГ СКРОЛЛА ПО ГЛУБИНЕ (25/50/75/100%) === */
+const scrollMarks = { 25: false, 50: false, 75: false, 100: false };
+window.addEventListener('scroll', () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  if (max <= 0) return;
+  const pct = Math.round(window.scrollY / max * 100);
+  [25,50,75,100].forEach(m => {
+    if (pct >= m && !scrollMarks[m]) {
+      scrollMarks[m] = true;
+      trackEvent('scroll', 'scroll_depth_' + m);
+    }
+  });
+}, { passive: true });
+
+/* === FLOATING CTA (показ после прокрутки) === */
+const floatCta = document.getElementById('floatCta');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 600) floatCta.classList.add('show');
+  else floatCta.classList.remove('show');
+}, { passive: true });
+
+/* === EXIT-INTENT POPUP === */
+(function(){
+  const popup = document.getElementById('exitPopup');
+  const close = document.getElementById('exitClose');
+  const dismiss = document.getElementById('exitDismiss');
+  if (!popup) return;
+  let shown = sessionStorage.getItem('exitShown') === '1';
+
+  function show() {
+    if (shown) return;
+    shown = true;
+    sessionStorage.setItem('exitShown', '1');
+    popup.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    trackEvent('exit_intent', 'popup_shown');
+  }
+  function hide() {
+    popup.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  // Desktop: курсор уходит за верхнюю границу
+  document.addEventListener('mouseleave', e => {
+    if (e.clientY < 10 && !shown) show();
+  });
+
+  // Mobile: быстрый scroll-up после долгого пребывания на странице
+  let lastY = window.scrollY;
+  let dwellOk = false;
+  setTimeout(() => { dwellOk = true; }, 30000);
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (dwellOk && lastY - y > 200 && y < 500 && !shown) show();
+    lastY = y;
+  }, { passive: true });
+
+  close.addEventListener('click', hide);
+  dismiss.addEventListener('click', () => { hide(); trackEvent('exit_intent', 'popup_dismiss'); });
+  popup.addEventListener('click', e => { if (e.target === popup) hide(); });
+})();
+
 /* === COOKIE === */
 const cookie = document.getElementById('cookie');
 if (!localStorage.getItem('cookieOk')) setTimeout(() => cookie.classList.add('show'), 1500);
@@ -1237,6 +2344,20 @@ document.getElementById('cookieOk').addEventListener('click', () => { localStora
 /* === ГОД === */
 document.getElementById('y').textContent = new Date().getFullYear();
 </script>
+
+<!-- Exit-intent popup -->
+<div class="exitPopup" id="exitPopup" role="dialog" aria-modal="true" aria-labelledby="exitTitle">
+  <div class="exitPopup__inner">
+    <button class="exitPopup__close" id="exitClose" aria-label="Закрыть">×</button>
+    <svg class="nIcon nIcon--lg exitPopup__icon" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 1 0 3 7l-7.5 7.5a2.1 2.1 0 0 1-3-3L14.7 10"/><path d="M14.7 6.3l3 3"/></svg>
+    <h3 class="exitPopup__title" id="exitTitle">Уходите без заявки?</h3>
+    <p class="exitPopup__text">Напишите задачу в Telegram — получите план работ и ориентир по цене за 30 минут. Без обязательств.</p>
+    <div class="exitPopup__cta">
+      <a class="btn btn--primary" href="https://t.me/ExcelAlexey" target="_blank" rel="noopener" data-track="exit_telegram" id="exitTgBtn">Написать в Telegram</a>
+      <button class="btn btn--ghost" id="exitDismiss" type="button">Не сейчас</button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

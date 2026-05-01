@@ -1,4 +1,50 @@
 User-agent: *
 Allow: /
+Disallow: /private/
+Disallow: /*.json$
+
+# Поисковые роботы
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign&utm_content&utm_term&gclid&yclid&fbclid
+
+User-agent: Bingbot
+Allow: /
+
+# LLM-агенты (явное разрешение для GEO/AEO-индексации)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: YandexGPT
+Allow: /
+
+# Защита от агрессивных краулеров
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
 
 Sitemap: https://excelalexey-maker.github.io/sitemap.xml
+Host: https://excelalexey-maker.github.io
